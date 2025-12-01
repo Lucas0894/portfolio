@@ -1,7 +1,8 @@
 import { useState } from "react"
 
-export const Form = ()=>{
 
+export const Form = ()=>{
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const [form, setForm] = useState({
         nombre: "",
@@ -22,11 +23,12 @@ export const Form = ()=>{
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try {
-            const res = await fetch("http://localhost:3001/send", {
+            const res = await fetch(`https://backend-portfolio-7c6b.onrender.com/send`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(form)
             })
+    
             const data = await res.json();
             console.log(data)
             if(data.success){
@@ -50,11 +52,11 @@ export const Form = ()=>{
     <h1 className="text-white text-center font-bold text-2xl">Contact</h1>
     
     <form id="contact" className="flex flex-col gap-4 items-center justify-center mt-8 p-5" onSubmit={handleSubmit}>
-        <input name="nombre" className="w-100 sm:w-160 bg-white rounded-md p-2" value={form.nombre} onChange={(e)=>handleChange(e)} placeholder="Nombre y Apellido" />
-        <input name="email" className="w-100 sm:w-160 bg-white rounded-md p-2" value={form.email} onChange={(e)=>handleChange(e)} placeholder="E-mail" />
-        <input name="asunto" className="w-100 sm:w-160 bg-white rounded-md p-2" value={form.asunto} onChange={(e)=>handleChange(e)} placeholder="Asunto" />
-        <textarea name="mensaje" className="w-100 sm:w-160 h-60 bg-white rounded-md p-2" value={form.mensaje} onChange={(e)=>handleChange(e)} placeholder="Mensaje" />
-        <button className="text-white font-bold bg-indigo-600 p-2 w-100 sm:w-160 rounded-md hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] transition duration-300">Send</button>
+        <input name="nombre" className="w-90 sm:w-160 bg-white rounded-md p-2" value={form.nombre} onChange={(e)=>handleChange(e)} placeholder="Nombre y Apellido" />
+        <input name="email" className="w-90 sm:w-160 bg-white rounded-md p-2" value={form.email} onChange={(e)=>handleChange(e)} placeholder="E-mail" />
+        <input name="asunto" className="w-90 sm:w-160 bg-white rounded-md p-2" value={form.asunto} onChange={(e)=>handleChange(e)} placeholder="Asunto" />
+        <textarea name="mensaje" className="w-90 sm:w-160 h-60 bg-white rounded-md p-2" value={form.mensaje} onChange={(e)=>handleChange(e)} placeholder="Mensaje" />
+        <button className="text-white font-bold bg-indigo-600 p-2 w-90 sm:w-160 rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] transition duration-300">Send</button>
     </form>
     </div>
     </section>
