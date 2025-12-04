@@ -72,7 +72,7 @@ export const NavBar = ()=>{
                 active && ( 
                 <>
                 
-                <nav className="flex fixed top-0 left-0 flex-col w-full h-full gap-10 bg-black border-1 border-b-gray-800 backdrop-blur-lg z-14">
+                <nav className="flex items-center justify-center fixed top-0 left-0 flex-col w-full h-full gap-10 bg-black/70 border-1 border-b-gray-800 backdrop-blur-lg z-14">
                     <a href="#home" className="border rounded-full text-center 
                      text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
                     Home
