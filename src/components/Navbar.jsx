@@ -7,7 +7,7 @@ export const NavBar = ()=>{
     const [active, setActive] = useState(false)
     useEffect(()=>{
         const handleResize = ()=>{
-            if(window.innerWidth < 640){
+            if(window.matchMedia("(max-width: 640px)").matches){
                setResponse(true)
             }else{
                setResponse(false)
