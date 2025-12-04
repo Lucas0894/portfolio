@@ -24,7 +24,7 @@ export const NavBar = ()=>{
 
     
         return !response? (
-                <nav className="xl:fixed fixed top-0 w-full bg-black border-1 border-b-gray-800 backdrop-blur-lg xl:flex-col z-10">
+                <nav className="xl:fixed fixed top-0 w-full bg-black/70 border-1 border-b-gray-800 backdrop-blur-lg xl:flex-col z-10">
                     <div className="flex gap-6 justify-center items-center h-18">
                 <a href="#home" className="border rounded-full text-center 
                      text-gray-400 border-hidden font-bold relative pb-2
@@ -61,10 +61,10 @@ export const NavBar = ()=>{
         ) : (
             <>
             {
-                active? <button className="fixed top-2 right-2 z-15" onClick={ ()=> setActive(false)}>
+                active? <button className="fixed top-4 right-4 z-15 cursor-pointer" onClick={ ()=> setActive(false)}>
                 <X color="#ffffff" />
              </button> :
-            <button className="fixed top-2 right-2 z-15" onClick={()=> setActive(true)}>
+            <button className="fixed top-4 right-4 z-15 cursor-pointer" onClick={()=> setActive(true)}>
                 <Menu color="#ffffff" />
              </button>
             } 
