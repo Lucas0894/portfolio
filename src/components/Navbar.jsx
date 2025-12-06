@@ -72,19 +72,19 @@ export const NavBar = ()=>{
                 <>
                 
                 <nav className={`flex items-center justify-center fixed top-0 left-0 flex-col w-full h-full gap-10 bg-black/70 transition transform duration-300 border-1 border-b-gray-800 backdrop-blur-lg z-14 ${active?"translate-x-0":"translate-x-full"}`}>
-                    <a href="#home" className="border rounded-full text-center 
+                    <a href="#home" onClick={()=>setActive(false)} className="border rounded-full text-center 
                      text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
                     Home
                 </a>
-                <a href="#about" className="border rounded-full text-center 
+                <a href="#about" onClick={()=>setActive(false)} className="border rounded-full text-center 
                      text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
                     About
                 </a>
-                <a href="#projects" className="border rounded-full text-center 
+                <a href="#projects" onClick={()=>setActive(false)} className="border rounded-full text-center 
                      text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
                     Projects
                 </a>
-                <a href="#contact" className="border rounded-full text-center 
+                <a href="#contact" onClick={()=>setActive(false)} className="border rounded-full text-center 
                      text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
                     Contact
                 </a>
