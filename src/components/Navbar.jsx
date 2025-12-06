@@ -69,10 +69,10 @@ export const NavBar = ()=>{
             <>
             {
                 active? <button className="fixed top-4 right-4 z-15 cursor-pointer" onClick={ ()=> setActive(false)}>
-                <X color="#ffffff" />
+                <X size={50} color="#ffffff" />
              </button> :
             <button className="fixed top-4 right-4 z-15 cursor-pointer" onClick={()=> setActive(true)}>
-                <Menu color="#ffffff" />
+                <Menu size={50} color="#ffffff" />
              </button>
             } 
             {
