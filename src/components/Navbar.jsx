@@ -5,6 +5,8 @@ import { X, Menu, ArrowUpZA } from "lucide-react";
 export const NavBar = ()=>{
     const [response, setResponse] = useState(false);
     const [active, setActive] = useState(false)
+    const [linkActive, setLinkActive]= useState("")
+
     useEffect(()=>{
         const handleResize = ()=>{
             if(window.matchMedia("(max-width: 640px)").matches){
@@ -19,6 +21,11 @@ export const NavBar = ()=>{
             window.removeEventListener("resize", handleResize)
         }
     },[])
+
+    const handleLink = (linked)=>{
+        setLinkActive(linked)
+        setActive(false)
+    }
 
     
 
@@ -72,20 +79,20 @@ export const NavBar = ()=>{
                 <>
                 
                 <nav className={`flex items-center justify-center fixed top-0 left-0 flex-col w-full h-full gap-10 bg-black/70 transition transform duration-300 border-1 border-b-gray-800 backdrop-blur-lg z-14 ${active?"translate-x-0":"translate-x-full"}`}>
-                    <a href="#home" onClick={()=>setActive(false)} className="border rounded-full text-center 
-                     text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
+                    <a href="#home" onClick={()=>handleLink("home")} className={`border rounded-full text-center 
+                      border-hidden font-bold relative pb-2 text-2xl ${linkActive === "home"? "text-white": "text-gray-400"}`}>
                     Home
                 </a>
-                <a href="#about" onClick={()=>setActive(false)} className="border rounded-full text-center 
-                     text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
+                <a href="#about" onClick={()=>handleLink("about")} className={`border rounded-full text-center 
+                      border-hidden font-bold relative pb-2 text-2xl ${linkActive === "about"? "text-white": "text-gray-400"}`}>
                     About
                 </a>
-                <a href="#projects" onClick={()=>setActive(false)} className="border rounded-full text-center 
-                     text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
+                <a href="#projects" onClick={()=>handleLink("projects")} className={`border rounded-full text-center 
+                      border-hidden font-bold relative pb-2 text-2xl ${linkActive === "projects"? "text-white": "text-gray-400"}`}>
                     Projects
                 </a>
-                <a href="#contact" onClick={()=>setActive(false)} className="border rounded-full text-center 
-                     text-gray-400 border-hidden font-bold relative pb-2 text-2xl">
+                <a href="#contact" onClick={()=>handleLink("contact")} className={`border rounded-full text-center 
+                      border-hidden font-bold relative pb-2 text-2xl ${linkActive === "contact"? "text-white": "text-gray-400"}`}>
                     Contact
                 </a>
                 </nav>
