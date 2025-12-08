@@ -36,7 +36,6 @@ export const Projects = ()=>{
    ];
 
    const [projectPerPage, setProjectPerPage]= useState(3);
-   const [animation, setAnimation] = useState("")
    const [currentPage, setCurrentPage] = useState(1);
    const indexOfLastPage = projectPerPage * currentPage;
    const indexOfFirstPage = indexOfLastPage - projectPerPage;
@@ -70,13 +69,8 @@ export const Projects = ()=>{
             <div className="relative flex items-center justify-center w-full max-w-[1600px]">
             <button onClick={()=>{
               if(currentPage > 1){
-                
+                setDirection("left")
                 setCurrentPage(currentPage - 1)
-                setAnimation("")
-                setTimeout(()=>{
-                  setAnimation("slide-In-Right")
-
-                },20)
               }
             }} className="z-10 absolute left-2 sm:-left-8 top-1/2 -translate-y-1/2 cursor-pointer text-white text-2xl hover:scale-110 transform  rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
@@ -86,7 +80,7 @@ export const Projects = ()=>{
                   
             </button>
             <div className="mt-8  border p-5 rounded-md flex gap-3 items-center justify-center relative w-full ">
-            <div  className={`grid xl:grid-flow-col justify-items-center gap-6  ${animation}`}>
+            <div key={currentPage} className={`grid xl:grid-flow-col justify-items-center gap-6  ${direction === "left"? "slide-In-Left": "slide-In-Right"}`}>
               {
                 currentProjects.map((item, i)=>{
 
@@ -105,11 +99,8 @@ export const Projects = ()=>{
             </div>
             <button disabled={currentPage == totalPages} onClick={()=>{
               if(currentPage < totalPages){
+                setDirection("right")
                 setCurrentPage(currentPage + 1)
-                setAnimation("");
-                setTimeout(()=>{
-                  setAnimation("slide-In-Left")
-                },40)
               }
             }} className="absolute z-10 right-2 sm:-right-8 top-1/2 -translate-y-1/2 cursor-pointer  text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
