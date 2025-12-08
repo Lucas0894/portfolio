@@ -81,7 +81,7 @@ export const Projects = ()=>{
                   
             </button>
             <div className="mt-8  border p-5 rounded-md flex gap-3 items-center justify-center relative w-full ">
-            <div key={currentPage} className={`grid xl:grid-flow-col justify-items-center gap-6  ${direction === "left"? "slide-In-Left": "slide-In-Right"}`}>
+            <div key={`${currentPage}-${direction}`} className={`grid xl:grid-flow-col justify-items-center gap-6  ${direction === "left"? "slide-In-Left": "slide-In-Right"}`}>
               {
                 currentProjects.map((item, i)=>{
 
