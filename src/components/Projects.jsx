@@ -109,7 +109,7 @@ export const Projects = ()=>{
                 setAnimation("");
                 setTimeout(()=>{
                   setAnimation("slide-In-Left")
-                },20)
+                },40)
               }
             }} className="absolute z-10 right-2 sm:-right-8 top-1/2 -translate-y-1/2 cursor-pointer  text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
