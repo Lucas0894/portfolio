@@ -36,6 +36,7 @@ export const Projects = ()=>{
    ];
 
    const [projectPerPage, setProjectPerPage]= useState(3);
+   const [selected, setSelected] = useState(null)
    const [currentPage, setCurrentPage] = useState(1);
    const indexOfLastPage = projectPerPage * currentPage;
    const indexOfFirstPage = indexOfLastPage - projectPerPage;
@@ -56,6 +57,11 @@ export const Projects = ()=>{
       window.removeEventListener("resize", handleResize)
     }
    },[])
+
+   const handleSelected = (select)=>{
+    setSelected("")
+    setSelected(select);
+   }
    
 
     return(
@@ -70,8 +76,10 @@ export const Projects = ()=>{
             <button onClick={()=>{
               if(currentPage > 1){
                 setDirection("");
-                setDirection("left")
-                setCurrentPage(currentPage - 1)
+                setTimeout(()=>{
+                  setDirection("left")
+                  setCurrentPage(currentPage - 1)
+                }, 40)
               }
             }} className="z-10 absolute left-2 sm:-left-8 top-1/2 -translate-y-1/2 cursor-pointer text-white text-2xl hover:scale-110 transform  rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
@@ -86,10 +94,10 @@ export const Projects = ()=>{
                 currentProjects.map((item, i)=>{
 
                   return (
-                    <div key={i} className="relative w-90 h-70 sm:w-115 sm:h-90 flex items-center justify-center rounded-md overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition duration-300">
+                    <div onClick={()=>handleSelected(item.name)} key={i} className="relative w-90 h-70 sm:w-115 sm:h-90 flex items-center justify-center rounded-md overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition duration-300">
                       <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300 border"/>
                       <div className="absolute inset-0 bg-black/0 hover:bg-black/50 backdrop-blur-sm flex items-center justify-center text-white text-center opacity-0 hover:opacity-100 transition duration-300">
-                      {item.description}
+                      {item.name === selected? item.description: ""}
                       </div>
                       </div>
     
@@ -101,8 +109,10 @@ export const Projects = ()=>{
             <button disabled={currentPage == totalPages} onClick={()=>{
               if(currentPage < totalPages){
                 setDirection("")
-                setDirection("right")
-                setCurrentPage(currentPage + 1)
+                setTimeout(()=>{
+                  setDirection("right")
+                  setCurrentPage(currentPage + 1)
+                }, 40)
               }
             }} className="absolute z-10 right-2 sm:-right-8 top-1/2 -translate-y-1/2 cursor-pointer  text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
