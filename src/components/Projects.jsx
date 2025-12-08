@@ -55,7 +55,7 @@ export const Projects = ()=>{
     return ()=>{
       window.removeEventListener("resize", handleResize)
     }
-   },[])
+   },[direction])
    
 
     return(
