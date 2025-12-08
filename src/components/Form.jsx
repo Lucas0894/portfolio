@@ -47,7 +47,7 @@ export const Form = ()=>{
 
    return (
     <>
-    <section className="min-h-screen flex justify-center items-center -mt-30">
+    <section className="min-h-screen flex justify-center items-center mt-10">
     <div className="shadow-[0_0_15px_rgba(255,255,255,0.3)] border rounded-md sm:p-5">
     <h1 className="text-white text-center font-bold text-2xl">Contact</h1>
     

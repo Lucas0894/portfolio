@@ -60,7 +60,7 @@ export const Projects = ()=>{
 
     return(
         <>
-        <section id="projects" className="min-h-screen flex justify-center items-center -mt-20">
+        <section id="projects" className="min-h-screen flex justify-center items-center mt-10">
             <div>
             <h1 className="text-white font-bold text-2xl text-center">
                 Projects
