@@ -63,44 +63,33 @@ export const Projects = ()=>{
     }
   }
 
-  return(
-    <>
-      <section id="projects" className="min-h-screen flex justify-center items-center -mt-20">
-        <div>
-          <h1 className="text-white font-bold text-2xl text-center">Projects</h1>
-          <p className="text-white mt-4 text-center">In this section...</p>
+    return(
+    <section id="projects" className="min-h-screen flex justify-center items-center -mt-20">
+      <div>
+        
+        <h1 className="text-white font-bold text-2xl text-center">Projects</h1>
+        <p className="text-white mt-4 text-center">In this section...</p>
 
-          <div className="relative flex items-center justify-center w-full max-w-[1600px] overflow-hidden">
-            <button onClick={goPrev} className="z-10 absolute left-2 sm:-left-8 top-1/2 -translate-y-1/2 ...">
-              {/* svg prev */}
-            </button>
+        <div className="relative flex items-center justify-center w-full max-w-[1600px] overflow-hidden">
 
-            <div className="mt-8 border p-5 rounded-md flex gap-3 items-center justify-center relative w-full">
-              {/* wrapper con overflow-hidden ya aplicado arriba */}
-              <div
-                ref={containerRef}
-                className={`grid xl:grid-flow-col justify-items-center gap-6 ${animation}`}
-              >
-                {
-                  currentProjects.map((item, i) => (
-                    <div key={item.id} className="relative w-90 h-70 sm:w-115 sm:h-90 flex items-center justify-center rounded-md overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition duration-300">
-                      <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300 border"/>
-                      <div className="absolute inset-0 bg-black/0 hover:bg-black/50 backdrop-blur-sm flex items-center justify-center text-white text-center opacity-0 hover:opacity-100 transition duration-300">
-                        {item.description}
-                      </div>
-                    </div>
-                  ))
-                }
-              </div>
+          <button onClick={goPrev} className="absolute left-2 top-1/2 -translate-y-1/2 z-10">Prev</button>
+
+          <div className="mt-8 border p-5 rounded-md flex items-center justify-center w-full">
+            <div ref={containerRef} className={`grid xl:grid-flow-col gap-6 ${animation}`}>
+              
+              {currentProjects.map(item => (
+                <div key={item.id} className="relative w-90 h-70 border rounded-md">
+                  <img src={item.image} className="w-full h-full object-contain"/>
+                </div>
+              ))}
+
             </div>
-
-            <button onClick={goNext} className="absolute z-10 right-2 sm:-right-8 top-1/2 -translate-y-1/2 ...">
-              {/* svg next */}
-            </button>
           </div>
 
+          <button onClick={goNext} className="absolute right-2 top-1/2 -translate-y-1/2 z-10">Next</button>
+
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
