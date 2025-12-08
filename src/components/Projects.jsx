@@ -69,6 +69,7 @@ export const Projects = ()=>{
             <div className="relative flex items-center justify-center w-full max-w-[1600px]">
             <button onClick={()=>{
               if(currentPage > 1){
+                setDirection("");
                 setDirection("left")
                 setCurrentPage(currentPage - 1)
               }
@@ -99,6 +100,7 @@ export const Projects = ()=>{
             </div>
             <button disabled={currentPage == totalPages} onClick={()=>{
               if(currentPage < totalPages){
+                setDirection("")
                 setDirection("right")
                 setCurrentPage(currentPage + 1)
               }
