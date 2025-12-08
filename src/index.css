@@ -53,6 +53,13 @@ body {
   }
 }
 
+.slide-In-Right,
+.slide-In-Left {
+  opacity: 0;                 
+  animation-fill-mode: both;  
+}
+
+
 .slide-In-Right {
   animation: slideInRight 0.7s ease-in-out;
 }
