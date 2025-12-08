@@ -9,7 +9,7 @@ export const Home = ()=>{
         <>
         
         
-          <NavBar />
+          
           <HeroSection />
           <AboutMe />
           <Projects />
