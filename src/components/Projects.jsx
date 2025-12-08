@@ -6,7 +6,32 @@ import { useState, useEffect, useRef } from "react"
 
 export const Projects = ()=>{
 
-  const arrProject = [ /* ... tus items ... */ ];
+  const arrProject = [
+  {
+    id: 1,
+    name: "Videogame",
+    image: videogamePage,
+    description: "En este proyecto se creó una SPA..."
+  },
+  {
+    id: 2,
+    name: "Food Project",
+    image: foodPage,
+    description: "En este proyecto se creó..."
+  },
+  {
+    id: 3,
+    name: "Reparo",
+    image: reparo,
+    description: "En este proyecto se creó..."
+  },
+  {
+    id: 4,
+    name: "Portfolio",
+    image: portfolio,
+    description: "En este proyecto se creó..."
+  },
+];
 
   const [projectPerPage, setProjectPerPage]= useState(3);
   const [animation, setAnimation] = useState("");
@@ -72,7 +97,7 @@ export const Projects = ()=>{
 
         <div className="relative flex items-center justify-center w-full max-w-[1600px] overflow-hidden">
 
-          <button onClick={goPrev} className="absolute left-2 top-1/2 -translate-y-1/2 z-10">Prev</button>
+          <button onClick={goPrev} className="absolute left-2 top-1/2 -translate-y-1/2 z-20">Prev</button>
 
           <div className="mt-8 border p-5 rounded-md flex items-center justify-center w-full">
             <div ref={containerRef} className={`grid xl:grid-flow-col gap-6 ${animation}`}>
