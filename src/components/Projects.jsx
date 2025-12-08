@@ -76,10 +76,8 @@ export const Projects = ()=>{
             <button onClick={()=>{
               if(currentPage > 1){
                 setDirection("");
-                setTimeout(()=>{
                   setDirection("left")
                   setCurrentPage(currentPage - 1)
-                }, 40)
               }
             }} className="z-10 absolute left-2 sm:-left-8 top-1/2 -translate-y-1/2 cursor-pointer text-white text-2xl hover:scale-110 transform  rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
@@ -109,10 +107,8 @@ export const Projects = ()=>{
             <button disabled={currentPage == totalPages} onClick={()=>{
               if(currentPage < totalPages){
                 setDirection("")
-                setTimeout(()=>{
                   setDirection("right")
                   setCurrentPage(currentPage + 1)
-                }, 40)
               }
             }} className="absolute z-10 right-2 sm:-right-8 top-1/2 -translate-y-1/2 cursor-pointer  text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
