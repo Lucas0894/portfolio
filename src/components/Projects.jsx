@@ -3,6 +3,7 @@ import foodPage from "../assets/FoodProject.png"
 import reparo from "../assets/Reparo.io.png"
 import portfolio from "../assets/portfolio.png"
 import { useState, useEffect } from "react"
+import { ChevronsLeft, ChevronsRight  } from 'lucide-react';
 
 
 export const Projects = ()=>{
@@ -83,9 +84,7 @@ export const Projects = ()=>{
               }
             }} className="z-10 absolute left-2 sm:-left-8 top-1/2 -translate-y-1/2 cursor-pointer text-white text-2xl hover:scale-110 transform  rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
+                  <ChevronsLeft />
                   
             </button>
             <div className="mt-8  border p-5 rounded-md flex gap-3 items-center justify-center relative w-full ">
@@ -94,7 +93,7 @@ export const Projects = ()=>{
                 currentProjects.map((item, i)=>{
 
                   return (
-                    <div onClick={()=>handleSelected(item.name)} key={i} className={`relative w-80 h-60 sm:w-115 sm:h-90 flex items-center justify-center rounded-md overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] ${item.name === selected? "shadow-[0_0_15px_rgba(255,255,255,0.3)]": ""} transition duration-300`}>
+                    <div onClick={()=>handleSelected(item.name)} key={i} className={`relative w-70 h-50 sm:w-115 sm:h-90 flex items-center justify-center rounded-md overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer ${item.name === selected? "shadow-[0_0_15px_rgba(255,255,255,0.3)]": ""} transition duration-300`}>
                       <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300 border"/>
                       <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex items-center justify-center text-white text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
       group-hover:opacity-100 group-hover:bg-black/60`}>
@@ -115,9 +114,7 @@ export const Projects = ()=>{
               }
             }} className="absolute z-10 right-2 sm:-right-8 top-1/2 -translate-y-1/2 cursor-pointer  text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <ChevronsRight />
             </button>           
             </div>
             </div>
