@@ -23,18 +23,18 @@ export const AboutMe = ()=>{
                 Skills
             </h1>
             <div className="grid xl:grid-flow-col xl:grid-rows-2 grid-flow-col grid-rows-6 justify-items-center gap-6 mt-4">
-            <img src={html5} height="70" width="70" />
-            <img src={css3}height="70" width="70" />
-            <img src={js} height="70" width="70" />
-            <img src={nodejs} height="70" width="70" />
-            <img src={react} height="70" width="70" />
-            <img src={mysql} height="70" width="70" />
-            <img src={postgresql} height="70" width="70" />
-            <img src={express} height="70" width="70" />
-            <img src={postman} height="70" width="70" />
-            <img src={redux} height="70" width="70" />
-            <img src={git} height="70" width="70" />
-            <img src={tailwind} height="70" width="70" />
+            <img src={html5} height="55" width="55" />
+            <img src={css3}height="55" width="55" />
+            <img src={js} height="55" width="55" />
+            <img src={nodejs} height="55" width="55" />
+            <img src={react} height="55" width="55" />
+            <img src={mysql} height="55" width="55" />
+            <img src={postgresql} height="55" width="55" />
+            <img src={express} height="55" width="55" />
+            <img src={postman} height="55" width="55" />
+            <img src={redux} height="55" width="55" />
+            <img src={git} height="55" width="55" />
+            <img src={tailwind} height="55" width="55" />
             </div>
         </div>
         </div>
