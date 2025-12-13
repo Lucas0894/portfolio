@@ -14,7 +14,7 @@ import tailwind from "../assets/tailwind.svg"
 export const AboutMe = ()=>{
     return (
         <>
-        <section id="about" className="min-h-screen flex justify-center items-center mt-15">
+        <section id="about" className="min-h-screen flex justify-center items-center mt-10">
         <div className="text-center">
         <h1 className="font-bold text-white text-2xl">About Me</h1>
         <p className="text-white mt-5">I'm a persistent, adaptable front-end developer with strong teamwork skills. I focus on problem-solving and clear communication to improve the user experience on every project.</p>
