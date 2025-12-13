@@ -1,5 +1,8 @@
 
 import lucas from "../assets/lucas.png"
+import { PiGithubLogoFill } from "react-icons/pi";
+import { FaLinkedinIn } from "react-icons/fa";
+
 
 
 export const HeroSection = ()=>{
@@ -13,6 +16,18 @@ export const HeroSection = ()=>{
         <p className="text-white">
             I transform ideas into dynamic, responsive web interfaces, combining design and technology to deliver unique user experiences.
         </p>
+        <div className="mt-20">
+            <button className="rounded-3xl m-10 p-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
+                <a href="https://github.com/Lucas0894">
+                <PiGithubLogoFill size={50} className="text-white" />
+                </a>
+        </button>
+        <button className="rounded-3xl m-10 p-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer  transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
+                <a href="http://www.linkedin.com/in/lucas-ca%C3%B1o-0a5406223">
+                <FaLinkedinIn size={50} className="text-white" />
+                </a> 
+        </button>
+        </div>
         </div>
             <img alt="img Lucas" src={lucas} className="mt-6 w-60 h-60 xl:w-130 xl:h-130 object-cover mask-radial-from-50% mask-radial-to-70%" />
         </section>
