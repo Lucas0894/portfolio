@@ -7,7 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 export const HeroSection = ()=>{
     return (
-        <section id="home" className="min-h-screen container mx-auto flex flex-col justify-center items-center xl:-pt-20 -mt-15 xl:flex-row xl:mt-0 relative">
+        <section id="home" className="min-h-screen container mx-auto flex flex-col justify-center items-center xl:-pt-20 mt-5 xl:flex-row xl:mt-0 relative">
         <div className="text-center px-4">
         <h1 className="text-white text-2x1 font-bold xl:text-4xl">Software Developer</h1>
         <p className=" text-indigo-700 text-4xl xl:text-7xl">Hi, I'm Lucas Caño.</p>
@@ -16,7 +16,7 @@ export const HeroSection = ()=>{
         <p className="text-white">
             I transform ideas into dynamic, responsive web interfaces, combining design and technology to deliver unique user experiences.
         </p>
-        <div className="mt-20">
+        <div className="xl:mt-20">
             <button className="rounded-3xl m-10 p-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
                 <a href="https://github.com/Lucas0894">
                 <PiGithubLogoFill size={50} className="text-white" />
