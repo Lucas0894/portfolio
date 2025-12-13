@@ -49,7 +49,7 @@ export const Form = ()=>{
     <>
     <section className="min-h-screen flex justify-center items-center mt-10">
     <div className="shadow-[0_0_15px_rgba(255,255,255,0.3)] border rounded-md sm:p-5">
-    <h1 className="text-white text-center font-bold text-2xl">Contact</h1>
+    <h1 className="text-white text-center font-bold text-2xl mt-10">Contact</h1>
     
     <form id="contact" className="flex flex-col gap-4 items-center justify-center mt-8 p-5" onSubmit={handleSubmit}>
         <input name="nombre" className="w-75 sm:w-160 bg-white rounded-md p-2" value={form.nombre} onChange={(e)=>handleChange(e)} placeholder="Nombre y Apellido" />
