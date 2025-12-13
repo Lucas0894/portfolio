@@ -17,12 +17,12 @@ export const AboutMe = ()=>{
         <section id="about" className="min-h-screen flex justify-center items-center -mt-10">
         <div className="text-center">
         <h1 className="font-bold text-white text-2xl">About Me</h1>
-        <p className="text-white mt-5">I'm a persistent, adaptable front-end developer with strong teamwork skills. I focus on problem-solving and clear communication to improve the user experience on every project.</p>
+        <p className="text-white mt-2 p-5">I'm a persistent, adaptable front-end developer with strong teamwork skills. I focus on problem-solving and clear communication to improve the user experience on every project.</p>
         <div className="mt-6 mx-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] p-2 rounded-md">
             <h1 className="text-white text-2xl">
                 Skills
             </h1>
-            <div className="grid xl:grid-flow-col xl:grid-rows-2 grid-flow-col grid-rows-6 justify-items-center gap-6 mt-4">
+            <div className="grid xl:grid-flow-col xl:grid-rows-2 grid-flow-col grid-rows-6 justify-items-center gap-6 mt-2">
             <img src={html5} height="55" width="55" />
             <img src={css3}height="55" width="55" />
             <img src={js} height="55" width="55" />

@@ -74,7 +74,7 @@ export const Projects = ()=>{
             <h1 className="text-white font-bold text-2xl text-center">
                 Projects
             </h1>
-            <p className="text-white mt-4 text-center">In this section, you'll find a selection of my most notable projects, which reflect my experience and skills in web development.</p>
+            <p className="text-white mt-4 text-center p-2">In this section, you'll find a selection of my most notable projects, which reflect my experience and skills in web development.</p>
             <div className="relative flex items-center justify-center w-full max-w-[1600px]">
             <button onClick={()=>{
               if(currentPage > 1){
