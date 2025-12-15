@@ -99,17 +99,17 @@ export const Projects = ()=>{
                 currentProjects.map((item, i)=>{
 
                   return (
-                    <div onClick={()=>handleSelected(item.name)} key={i} className={`relative w-70 h-50 sm:w-115 sm:h-90 flex items-center justify-center rounded-md overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer ${item.name === selected? "shadow-[0_0_15px_rgba(255,255,255,0.3)]": ""} transition duration-300`}>
+                    <div onClick={()=>handleSelected(item.name)} key={i} className={`relative w-70 h-80 sm:w-115 sm:h-90 flex items-center justify-center rounded-md overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer ${item.name === selected? "shadow-[0_0_15px_rgba(255,255,255,0.3)]": ""} transition duration-300`}>
                       <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300 border"/>
                       <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-white text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
       group-hover:opacity-100 group-hover:bg-black/60`}>
                       {item.description}
-                      <button className="p-2 m-2 bg-indigo-900 rounded-3xl cursor-pointer transition shadow-[0_0_15px_rgba(255,255,255,0.3)] transform hover:scale-110"> 
+                      <button className="p-2 m-2 sm:p-1 sm:m-1 bg-indigo-900 rounded-3xl cursor-pointer transition shadow-[0_0_15px_rgba(255,255,255,0.3)] transform hover:scale-110"> 
                       <a href={item.gitHub}>Link Repositorio</a>
                       </button>
                       {
                         item.page?
-                        <button className="p-2 m-2 bg-indigo-900 rounded-3xl cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.3)] transition transform hover:scale-110"> 
+                        <button className="p-2 m-2 sm:p-1 sm:m-1 bg-indigo-900 rounded-3xl cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.3)] transition transform hover:scale-110"> 
                         <a href={item.gitHub}>Sitio Web</a>
                         </button>: ""
                       }
