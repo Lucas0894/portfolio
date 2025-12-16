@@ -110,7 +110,7 @@ export const Projects = ()=>{
                       {
                         item.page?
                         <button className="p-2 m-2 sm:p-1 sm:m-1 bg-indigo-900 rounded-3xl cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.3)] transition transform hover:scale-110"> 
-                        <a href={item.gitHub}>Sitio Web</a>
+                        <a href={item.page}>Sitio Web</a>
                         </button>: ""
                       }
                       </div>
