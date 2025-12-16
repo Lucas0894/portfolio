@@ -1,7 +1,9 @@
 
 import lucas from "../assets/lucas.png"
 import { PiGithubLogoFill } from "react-icons/pi";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa"; 
+import { IoDocumentAttachOutline } from "react-icons/io5";
+
 
 
 
@@ -26,6 +28,9 @@ export const HeroSection = ()=>{
                 <a href="http://www.linkedin.com/in/lucas-ca%C3%B1o-0a5406223">
                 <FaLinkedinIn size={50} className="text-white" />
                 </a> 
+        </button>
+        <button className="rounded-3xl m-10 p-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer  transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
+            <a href="../assets/LucasC_CV.pdf" download><IoDocumentAttachOutline size={50} className="text-white" /></a>
         </button>
         </div>
         </div>
