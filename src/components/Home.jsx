@@ -3,6 +3,7 @@ import { HeroSection } from "./HeroSection"
 import { AboutMe } from "./AboutMe"
 import { Projects } from "./Projects"
 import { Form } from "./Form"
+import { Footer } from "./Footer"
 
 export const Home = ()=>{
     return (
@@ -14,6 +15,7 @@ export const Home = ()=>{
           <AboutMe />
           <Projects />
           <Form />
+          <Footer />
         </>
     )
 }

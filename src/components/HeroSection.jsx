@@ -19,17 +19,17 @@ export const HeroSection = ()=>{
             I transform ideas into dynamic, responsive web interfaces, combining design and technology to deliver unique user experiences.
         </p>
         <div className="xl:mt-20">
-            <button className="rounded-3xl m-10 p-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
+            <button className="rounded-3xl xl:m-10 p-4 m-4  shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
                 <a href="https://github.com/Lucas0894">
                 <PiGithubLogoFill size={50} className="text-white" />
                 </a>
         </button>
-        <button className="rounded-3xl m-10 p-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer  transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
+        <button className="rounded-3xl xl:m-10 p-4 m-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer  transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
                 <a href="http://www.linkedin.com/in/lucas-ca%C3%B1o-0a5406223">
                 <FaLinkedinIn size={50} className="text-white" />
                 </a> 
         </button>
-        <button className="rounded-3xl m-10 p-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer  transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
+        <button className="rounded-3xl xl:m-10 p-4 m-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer  transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
             <a href="../assets/LucasC_CV.pdf" download><IoDocumentAttachOutline size={50} className="text-white" /></a>
         </button>
         </div>
