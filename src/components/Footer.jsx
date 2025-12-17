@@ -11,7 +11,7 @@ export const Footer = ()=>{
                 <a className="text-gray-400 font-bold cursor-pointer hover:text-white">Projects</a>
                 <a className="text-gray-400 font-bold cursor-pointer hover:text-white">Contact</a>
             </div>
-            <div className="text-gray-400">
+            <div className="text-gray-400 text-[12px] xl:text-[15px]">
                 2025 Designed & Developed by Lucas Caño. All rights reserved
             </div>
             </div>
