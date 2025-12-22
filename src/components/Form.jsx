@@ -60,7 +60,7 @@ export const Form = ()=>{
         <input name="email" className="w-75 sm:w-160 bg-white rounded-md p-2" value={form.email} onChange={(e)=>handleChange(e)} placeholder="E-mail" />
         <input name="asunto" className="w-75 sm:w-160 bg-white rounded-md p-2" value={form.asunto} onChange={(e)=>handleChange(e)} placeholder="Asunto" />
         <textarea name="mensaje" className="w-75 sm:w-160 h-60 bg-white rounded-md p-2" value={form.mensaje} onChange={(e)=>handleChange(e)} placeholder="Mensaje" />
-        <button className="text-white font-bold bg-indigo-600 p-2 w-75 sm:w-160 rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] transition duration-300">Send</button>
+        <button className="text-white font-bold bg-indigo-600 p-2 w-75 sm:w-160 rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] transition transform hover:scale-105 duration-300">Send</button>
         {
             sending?
             <div className={`absolute inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center rounded-md z-10`}>
