@@ -30,7 +30,7 @@ export const HeroSection = ()=>{
                 </a> 
         </button>
         <button className="rounded-3xl xl:m-10 p-4 m-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer  transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
-            <a href="/public/LucasC_CV.pdf" download><IoDocumentAttachOutline size={50} className="text-white" /></a>
+            <a href="/LucasC_CV.pdf" download><IoDocumentAttachOutline size={50} className="text-white" /></a>
         </button>
         </div>
         </div>
