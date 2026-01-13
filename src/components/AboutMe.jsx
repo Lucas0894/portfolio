@@ -16,8 +16,10 @@ export const AboutMe = ()=>{
         <>
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
         <div className="text-center">
-        <h1 className="font-bold text-white text-2xl">About Me</h1>
-        <p className="text-white mt-2 p-5">I'm a persistent, adaptable front-end developer with strong teamwork skills. I focus on problem-solving and clear communication to improve the user experience on every project.</p>
+        <h1 className="font-bold text-white text-2xl">Sobre mi</h1>
+        <p className="text-white mt-2 p-5">Soy un desarrollador front-end perseverante y adaptable con gran capacidad de trabajo en equipo. Me centro en la resolución de problemas y la comunicación fluida para mejorar la experiencia del usuario en cada proyecto.
+
+</p>
         <div className="mt-6 mx-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] p-2 rounded-md">
             <h1 className="text-white text-2xl">
                 Skills
