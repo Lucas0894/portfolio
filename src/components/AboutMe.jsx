@@ -17,7 +17,7 @@ export const AboutMe = ()=>{
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
         <div className="text-center">
         <h1 className="font-bold text-white text-2xl">Sobre mi</h1>
-        <p className="text-white mt-2 mr-15 ml-15 p-5">Soy desarrollador web con foco en Frontend, especializado en construir interfaces web claras, funcionales y responsivas. Trabajo principalmente con JavaScript y React, aplicando buenas prácticas de desarrollo y priorizando la experiencia de usuario en cada proyecto.
+        <p className="text-white mt-2 mr-15 ml-15 p-5">Soy desarrollador web con foco en Frontend. Trabajo principalmente con JavaScript y React, aplicando buenas prácticas de desarrollo y priorizando la experiencia de usuario en cada proyecto.
              Además, tengo conocimientos en backend, lo que me permite comprender cómo funcionan las aplicaciones de forma integral, aunque mi atención actual está en el desarrollo frontend.
 A continuación, te muestro las tecnologías que utilizo para construir mis proyectos.
 </p>
