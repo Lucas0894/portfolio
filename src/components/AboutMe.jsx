@@ -15,7 +15,7 @@ export const AboutMe = ()=>{
     return (
         <>
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
-        <div className="text-center">
+        <div className="text-center mt-20">
         <h1 className="font-bold text-white text-2xl">Sobre mi</h1>
         <p className="text-white mt-2 mr-15 ml-15 p-5">Soy desarrollador web con foco en Frontend. Trabajo principalmente con JavaScript y React, aplicando buenas prácticas de desarrollo y priorizando la experiencia de usuario en cada proyecto.
              Además, tengo conocimientos en backend, lo que me permite comprender cómo funcionan las aplicaciones de forma integral, aunque mi atención actual está en el desarrollo frontend.
