@@ -81,19 +81,19 @@ export const NavBar = ()=>{
                 <nav className={`flex items-center justify-center fixed top-0 left-0 flex-col w-full h-full gap-10 bg-black/70 transition transform duration-300 border-1 border-b-gray-800 backdrop-blur-lg z-14 ${active?"translate-x-0":"translate-x-full"}`}>
                     <a href="#home" onClick={()=>handleLink("home")} className={`border rounded-full text-center 
                       border-hidden font-bold relative pb-2 text-2xl ${linkActive === "home"? "text-white": "text-gray-400"}`}>
-                    Home
+                    Inicio
                 </a>
                 <a href="#about" onClick={()=>handleLink("about")} className={`border rounded-full text-center 
                       border-hidden font-bold relative pb-2 text-2xl ${linkActive === "about"? "text-white": "text-gray-400"}`}>
-                    About
+                    Sobre mi
                 </a>
                 <a href="#projects" onClick={()=>handleLink("projects")} className={`border rounded-full text-center 
                       border-hidden font-bold relative pb-2 text-2xl ${linkActive === "projects"? "text-white": "text-gray-400"}`}>
-                    Projects
+                    Proyectos
                 </a>
                 <a href="#contact" onClick={()=>handleLink("contact")} className={`border rounded-full text-center 
                       border-hidden font-bold relative pb-2 text-2xl ${linkActive === "contact"? "text-white": "text-gray-400"}`}>
-                    Contact
+                    Contacto
                 </a>
                 </nav>
                 </>
