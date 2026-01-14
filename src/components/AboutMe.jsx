@@ -17,14 +17,15 @@ export const AboutMe = ()=>{
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
         <div className="text-center">
         <h1 className="font-bold text-white text-2xl">Sobre mi</h1>
-        <p className="text-white mt-2 p-5">Soy un desarrollador front-end perseverante y adaptable con gran capacidad de trabajo en equipo. Me centro en la resolución de problemas y la comunicación fluida para mejorar la experiencia del usuario en cada proyecto.
-
+        <p className="text-white mt-2 mr-15 ml-15 p-5">Soy desarrollador web con foco en Frontend, especializado en construir interfaces web claras, funcionales y responsivas. Trabajo principalmente con JavaScript y React, aplicando buenas prácticas de desarrollo y priorizando la experiencia de usuario en cada proyecto.
+             Además, tengo conocimientos en backend, lo que me permite comprender cómo funcionan las aplicaciones de forma integral, aunque mi atención actual está en el desarrollo frontend.
+A continuación, te muestro las tecnologías que utilizo para construir mis proyectos.
 </p>
-        <div className="mt-6 mx-4 shadow-[0_0_15px_rgba(255,255,255,0.3)] p-2 rounded-md">
-            <h1 className="text-white text-2xl">
-                Skills
+        <div className="mt-6 mx-4 mr-10 ml-10 shadow-[0_0_15px_rgba(255,255,255,0.3)] p-2 rounded-md">
+            <h1 className="text-white text-2xl m-10">
+                Tecnologias y Herramientas que utilizo
             </h1>
-            <div className="grid xl:grid-flow-col xl:grid-rows-2 grid-flow-col grid-rows-6 justify-items-center gap-6 mt-2">
+            <div className="grid xl:grid-flow-col xl:grid-rows-2 grid-flow-col grid-rows-6 justify-items-center gap-6 mt-2 mb-10">
             <img src={html5} height="55" width="55" />
             <img src={css3}height="55" width="55" />
             <img src={js} height="55" width="55" />

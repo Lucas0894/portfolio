@@ -14,10 +14,7 @@ export const HeroSection = ()=>{
         <div className="text-center px-4">
         <h1 className="text-white text-2x1 font-bold xl:text-4xl">Frontend Developer</h1>
         <p className=" text-indigo-700 text-4xl xl:text-7xl">Hola, soy Lucas Caño.</p>
-        <p className="text-white mt-6">Desarrollador Frontend especializado en React y JavaScript, enfocado en crear interfaces web claras, funcionales y responsivas.</p>
-        <p className="text-white">
-            Transformo ideas en soluciones web bien estructuradas, priorizando la experiencia de usuario y las buenas prácticas de desarrollo frontend.
-        </p>
+        <p className="text-white mt-6 mx-20">Desarrollador Frontend especializado en React y JavaScript, enfocado en crear interfaces web claras, funcionales y responsivas con foco en UX.</p>
         <div className="xl:mt-20">
             <button className="rounded-3xl xl:m-10 p-4 m-4  shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer transition transform hover:scale-110 hover:shadow-[0_0_15px_rgba(75,0,130,1)]">
                 <a href="https://github.com/Lucas0894">
