@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { PacmanLoader} from "react-spinners"
+import { RingLoader } from "react-spinners"
 
 
 
@@ -101,7 +101,7 @@ export const Form = ()=>{
         {
             sending?
             <div className={`absolute inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center rounded-md z-10`}>
-    <PacmanLoader size={40} color="rgba(99,102,241, 1)" />
+    <RingLoader size={40} color="rgba(99,102,241, 1)" />
     </div>: "" 
         }
     </form>
