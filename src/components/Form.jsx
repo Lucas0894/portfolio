@@ -101,7 +101,7 @@ export const Form = ()=>{
         {
             sending?
             <div className={`absolute inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center rounded-md z-10`}>
-    <RingLoader size={40} color="rgba(99,102,241, 1)" />
+    <RingLoader size={60} color="rgba(99,102,241, 1)" />
     </div>: "" 
         }
     </form>
