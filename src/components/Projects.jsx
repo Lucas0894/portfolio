@@ -2,6 +2,7 @@ import videogamePage from "../assets/VideogameProject.png"
 import foodPage from "../assets/FoodProject.png"
 import reparo from "../assets/Reparo.io.png"
 import portfolio from "../assets/portfolio.png"
+import todoList from "../assets/todoList.png"
 import { useState, useEffect } from "react"
 import { ChevronsLeft, ChevronsRight  } from 'lucide-react';
 
@@ -39,6 +40,15 @@ export const Projects = ()=>{
       page: "https://lucascano.vercel.app/",
       gitHub: "https://github.com/Lucas0894/portfolio",
       description: "Portfolio personal desarrollado para presentar mis proyectos, información sobre mí y enlaces a mis perfiles profesionales (GitHub y LinkedIn). Incluye una sección de contacto vía correo electrónico, descarga de CV, y fue construido con HTML, CSS y JavaScript, utilizando React y Tailwind CSS en el frontend, Express en el backend y Vercel para el despliegue."
+    }, 
+    {
+      id: 5,
+      name: "todoList",
+      image: todoList,
+      page: "https://todo-list-lucas-pi.vercel.app/",
+      gitHub: "https://github.com/Lucas0894/todo_list.git",
+      description: "Una aplicación para gestionar tareas diarias. Permite agregar, editar, marcar como completadas y eliminar tareas, con persistencia de datos en localStorage. Construida con React, TailwindCSS y Vite."
+
     }
    ];
 
