@@ -73,5 +73,5 @@ Luego abrir en el navegador:
 http://localhost:5173
 📫 Contacto
 Podés contactarme por:
-LinkedIn: https://linkedin.com/in/lucas-cano⁠�
+LinkedIn: https://www.linkedin.com/in/lucas-ca%C3%B1o-0a5406223⁠
 Email: luema94@gmail.com
