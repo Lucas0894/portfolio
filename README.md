@@ -62,7 +62,7 @@ src/
 
 🌐 Ver en vivo
 El portfolio está desplegado y disponible online:
-👉 https://portfolio-sigma-lyart-43.vercel.app⁠� �
+👉 https://lucascano.vercel.app/
 GitHub
 ▶️ Cómo usar este repo (local)
 Si querés clonar este portfolio y trabajarlo localmente:
