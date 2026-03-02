@@ -20,7 +20,7 @@ export const AboutMe = ()=>{
         <p className="text-white mt-2 mr-15 ml-15 p-5">Soy desarrollador web con foco en Frontend, trabajando principalmente con JavaScript y React. Aplico buenas prácticas y siempre priorizo la experiencia del usuario en cada proyecto 
 Aunque mi especialidad es el Frontend, también tengo conocimientos en Backend, lo que me permite comprender cómo funcionan las aplicaciones de forma integral.
 </p>
-        <div className="mt-6 mx-4 mr-10 ml-10 shadow-[0_0_15px_rgba(255,255,255,0.3)] p-2 rounded-md">
+        <div className="mt-6 mx-4 mr-10 ml-10 bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-md">
             <h1 className="text-white text-2xl m-10">
                 Tecnologias y Herramientas que utilizo
             </h1>

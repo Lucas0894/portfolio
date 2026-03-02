@@ -86,7 +86,7 @@ export const Form = ()=>{
    return (
     <>
     <section className=" min-h-screen flex justify-center items-center mt-10">
-    <div className="relative shadow-[0_0_15px_rgba(255,255,255,0.3)] mt-25 border rounded-md sm:p-5">
+    <div className="relative bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] mt-25 border rounded-md sm:p-5">
     <h1 className="text-white text-center font-bold text-2xl mt-10">Contacto</h1> 
     <form id="contact" className="flex flex-col gap-4 items-center justify-center backdrop-blur-sm mt-8 p-5" onSubmit={handleSubmit}>
         <input name="nombre" className="w-75 sm:w-160 bg-white rounded-md p-2" value={form.nombre} onChange={(e)=>handleChange(e)} placeholder="Nombre y Apellido" />

@@ -3,7 +3,7 @@
 export const Footer = ()=>{
     return (
         <>
-        <section className="flex items-center justify-center m-2 border-t-gray-800 border-1">
+        <section className="flex items-center justify-center mb-2 mt-2 border-t border-white/10">
             <div>
             <div className="flex gap-5 m-3 items-center justify-center">
                 <a href="#home" className="text-gray-400 font-bold cursor-pointer hover:text-white">Inicio</a>

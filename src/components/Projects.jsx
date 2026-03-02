@@ -103,13 +103,13 @@ export const Projects = ()=>{
                   <ChevronsLeft />
                   
             </button>
-            <div className="mt-8  border p-5 rounded-md flex gap-3 items-center justify-center relative w-full ">
+            <div className="mt-8 p-5 flex gap-3 items-center justify-center relative w-full ">
             <div key={currentPage} className={`grid xl:grid-flow-col justify-items-center gap-7  ${direction === "left"? "slide-In-Left": "slide-In-Right"}`}>
               {
                 currentProjects.map((item, i)=>{
 
                   return (
-                    <div onClick={()=>handleSelected(item.name)} key={i} className={`relative w-70 h-80 sm:w-115 sm:h-90 flex items-center justify-center transition transform hover:scale-105 rounded-md overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer ${item.name === selected? "shadow-[0_0_15px_rgba(255,255,255,0.3)]": ""} transition duration-300`}>
+                    <div onClick={()=>handleSelected(item.name)} key={i} className={`bg-[#202020] relative w-70 h-80 sm:w-115 sm:h-90 flex items-center justify-center transition transform hover:scale-105 rounded-md overflow-hidden shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer ${item.name === selected? "shadow-[0_0_15px_rgba(255,255,255,0.3)]": ""} transition duration-300`}>
                       <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300 border"/>
                       <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-white text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
       group-hover:opacity-100 group-hover:bg-black/60`}>

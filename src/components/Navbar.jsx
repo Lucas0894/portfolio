@@ -28,10 +28,8 @@ export const NavBar = ()=>{
     }
 
     
-
-    
         return !response? (
-                <nav className="xl:fixed fixed top-0 w-full bg-black/70 border-1 border-b-gray-800 backdrop-blur-lg xl:flex-col z-10">
+                <nav className="xl:fixed fixed top-0 w-full bg-[#202020]/70 border-b border-white/10 backdrop-blur-lg xl:flex-col z-10">
                     <div className="flex gap-6 justify-center items-center h-18">
                 <a href="#home" className="border rounded-full text-center 
                      text-gray-400 border-hidden font-bold relative pb-2
@@ -78,7 +76,7 @@ export const NavBar = ()=>{
             {
                 <>
                 
-                <nav className={`flex items-center justify-center fixed top-0 left-0 flex-col w-full h-full gap-10 bg-black/70 transition transform duration-300 border-1 border-b-gray-800 backdrop-blur-lg z-14 ${active?"translate-x-0":"translate-x-full"}`}>
+                <nav className={`flex items-center justify-center fixed top-0 left-0 flex-col w-full h-full gap-10 bg-[#1b1b1b]/70 transition transform duration-300 border-1 border-b-gray-800 backdrop-blur-lg z-14 ${active?"translate-x-0":"translate-x-full"}`}>
                     <a href="#home" onClick={()=>handleLink("home")} className={`border rounded-full text-center 
                       border-hidden font-bold relative pb-2 text-2xl ${linkActive === "home"? "text-white": "text-gray-400"}`}>
                     Inicio
