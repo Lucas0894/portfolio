@@ -10,10 +10,14 @@ import postman from "../assets/postman.svg"
 import redux from "../assets/redux.svg"
 import git from "../assets/git1.svg"
 import tailwind from "../assets/tailwind.svg"
+import { motion } from "framer-motion";
 
 export const AboutMe = ()=>{
     return (
-        <>
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
         <div className="text-center mt-20">
         <h1 className="font-bold text-white text-2xl">Sobre mi</h1>
@@ -41,6 +45,6 @@ Aunque mi especialidad es el Frontend, también tengo conocimientos en Backend, 
         </div>
         </div>
         </section>
-        </>
+        </motion.div>
     )
 }

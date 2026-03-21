@@ -5,7 +5,7 @@ import portfolio from "../assets/portfolio.png"
 import todoList from "../assets/todoList.png"
 import { useState, useEffect } from "react"
 import { ChevronsLeft, ChevronsRight  } from 'lucide-react';
-
+import { motion } from "framer-motion";
 
 export const Projects = ()=>{
 
@@ -84,7 +84,10 @@ export const Projects = ()=>{
    
 
     return(
-        <>
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
         <section id="projects" className="min-h-screen flex justify-center items-center mt-10">
             <div>
             <h1 className="text-white font-bold text-2xl text-center">
@@ -146,7 +149,7 @@ export const Projects = ()=>{
             </div>
                       
         </section>
-        </>
+        </motion.div>
     )
 }
 

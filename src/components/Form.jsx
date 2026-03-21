@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { RingLoader } from "react-spinners"
-
-
+import { motion } from "framer-motion";
 
 export const Form = ()=>{
     const API_URL = import.meta.env.VITE_API_URL;
@@ -84,7 +83,10 @@ export const Form = ()=>{
 
 
    return (
-    <>
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}>
     <section className=" min-h-screen flex justify-center items-center mt-10">
     <div className="relative bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] mt-25 border rounded-md sm:p-5">
     <h1 className="text-white text-center font-bold text-2xl mt-10">Contacto</h1> 
@@ -108,6 +110,6 @@ export const Form = ()=>{
 
     </div>
     </section>
-    </>
+    </motion.div>
    )
 }
