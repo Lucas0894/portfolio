@@ -3,6 +3,7 @@ import foodPage from "../assets/FoodProject.png"
 import reparo from "../assets/Reparo.io.png"
 import portfolio from "../assets/portfolio.png"
 import todoList from "../assets/todoList.png"
+import weatherApp from "../assets/weatherApp.png"
 import { useState, useEffect } from "react"
 import { ChevronsLeft, ChevronsRight  } from 'lucide-react';
 import { motion } from "framer-motion";
@@ -49,6 +50,14 @@ export const Projects = ()=>{
       gitHub: "https://github.com/Lucas0894/todo_list.git",
       description: "Una aplicación para gestionar tareas diarias. Permite agregar, editar, marcar como completadas y eliminar tareas, con persistencia de datos en localStorage. Construida con React, TailwindCSS y Vite."
 
+    },
+    {
+      id: 6,
+      name: "weatherApp",
+      image: weatherApp,
+      page: "https://weather-app-lucas0894s-projects.vercel.app/",
+      gitHub: "https://github.com/Lucas0894/weatherApp.git",
+      description: "Weather app desarrollada en React que muestra el clima en tiempo real mediante APIs externas. Permite buscar ciudades, obtener datos por geolocalización y cuenta con diseño responsive adaptado a dispositivos móviles y desktop."
     }
    ];
 
