@@ -5,7 +5,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { IoDocumentAttachOutline } from "react-icons/io5";
 import  LucasC_CV  from "../assets/Lucas_Caño_CV_Ingles.pdf"
 import { TypeAnimation } from "react-type-animation";
-import { useState, useEffect } from "react";
 
 export const HeroSection = ()=>{
     
