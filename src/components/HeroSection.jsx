@@ -15,7 +15,7 @@ export const HeroSection = ()=>{
         transition={{ duration: 0.8 }}>
         <section id="home" className="min-h-screen container mx-auto flex flex-col justify-center items-center xl:-pt-20 mt-5 xl:flex-row xl:mt-0 relative">
         <div className="text-center px-4">
-        <h1 className="text-white text-2xl xl:text-4xl"><TypeAnimation sequence={["Web Developer · ",1500, "", 500]} speed={50}repeat={Infinity}/><span className="text-indigo-400">React</span></h1>
+        <h1 className="text-white text-2xl xl:text-4xl"><TypeAnimation sequence={["Desarrollador Web · ",1500, "", 500]} speed={50}repeat={Infinity}/><span className="text-indigo-400">React</span></h1>
         <p className=" text-white text-4xl xl:text-7xl font-semibold">Hola, soy {" "}<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Lucas Caño.</span></p>
         <p className="text-white mt-6 mx-20">Desarrollador Frontend especializado en <span className="font-bold">React</span> y <span className="font-bold">JavaScript</span>, enfocado en crear interfaces web claras, funcionales y responsivas con foco en UX.</p>
         <div className="xl:mt-20">
