@@ -91,13 +91,13 @@ export const Form = ()=>{
     <div className="relative bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] mt-25 border rounded-md sm:p-5">
     <h1 className="text-white text-center font-bold text-2xl mt-10">Contacto</h1> 
     <form id="contact" className="flex flex-col gap-4 items-center justify-center backdrop-blur-sm mt-8 p-5" onSubmit={handleSubmit}>
-        <input name="nombre" className="w-75 sm:w-160 bg-white rounded-md p-2" value={form.nombre} onChange={(e)=>handleChange(e)} placeholder="Nombre y Apellido" />
+        <input name="nombre" className="w-75 sm:w-160 bg-white rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.nombre} onChange={(e)=>handleChange(e)} placeholder="Nombre y Apellido" />
         {errors.nombre && <p className="text-red-500 text-sm">{errors.nombre}</p>}
-        <input name="email" className="w-75 sm:w-160 bg-white rounded-md p-2" value={form.email} onChange={(e)=>handleChange(e)} placeholder="E-mail" />
+        <input name="email" className="w-75 sm:w-160 bg-white rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.email} onChange={(e)=>handleChange(e)} placeholder="E-mail" />
         {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
-        <input name="asunto" className="w-75 sm:w-160 bg-white rounded-md p-2" value={form.asunto} onChange={(e)=>handleChange(e)} placeholder="Asunto" />
+        <input name="asunto" className="w-75 sm:w-160 bg-white rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.asunto} onChange={(e)=>handleChange(e)} placeholder="Asunto" />
         {errors.asunto && <p className="text-red-500 text-sm">{errors.asunto}</p>}
-        <textarea name="mensaje" className="w-75 sm:w-160 h-60 bg-white rounded-md p-2" value={form.mensaje} onChange={(e)=>handleChange(e)} placeholder="Mensaje" />
+        <textarea name="mensaje" className="w-75 sm:w-160 h-60 bg-white rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.mensaje} onChange={(e)=>handleChange(e)} placeholder="Mensaje" />
         {errors.mensaje && <p className="text-red-500 text-sm">{errors.mensaje}</p>}
         <button className="text-white font-bold bg-indigo-600 p-2 w-75 sm:w-160 rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] transition transform hover:scale-105 duration-300">Enviar</button>
         {

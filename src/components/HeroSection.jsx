@@ -33,7 +33,7 @@ export const HeroSection = ()=>{
                 <IoDocumentAttachOutline size={50} className="text-white" /></a> 
         </div>
         </div>
-        <div className="blob-wrapper w-60 h-60 xl:w-110 xl:h-110">
+        <div className="blob-wrapper w-60 h-60 xl:w-110 xl:h-110 translate-y-8 xl:translate-y-0">
                 <img style={{ boxShadow: `0 0 10px #3b82f6,0 0 20px #3b82f6,0 0 30px #5c6ac4,0 0 40px #5c6ac4`}} alt="img Lucas" src={lucas} className="blob-image object-cover" />
         </div>
         </section>
