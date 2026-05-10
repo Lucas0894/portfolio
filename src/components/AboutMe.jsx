@@ -32,7 +32,7 @@ export const AboutMe = ()=>{
         <p className="text-white p-2">Soy desarrollador web con foco en Frontend, especializado en la creación de interfaces modernas, dinámicas y responsivas utilizando tecnologías como JavaScript y React. Me gusta desarrollar experiencias web que no solo se vean bien visualmente, sino que también sean intuitivas, accesibles y fáciles de usar para las personas. En cada proyecto priorizo la experiencia del usuario, el rendimiento de la aplicación y la escritura de código limpio y mantenible aplicando buenas prácticas de desarrollo. 
         </p> 
         <p className="text-white p-2">Disfruto transformar ideas en soluciones digitales funcionales, cuidando tanto los detalles visuales como la estructura del proyecto. Me considero una persona curiosa, comprometida y en constante aprendizaje, siempre buscando mejorar mis habilidades y adaptarme a nuevas tecnologías y herramientas del ecosistema web.</p>
-        <p className="mt-4 text-white p-2">
+        <p className="text-white p-2">
         Aunque mi especialidad es el Frontend, también cuento con conocimientos en Backend y bases de datos, lo que me permite comprender cómo funcionan las aplicaciones de forma integral y tener una visión más completa del desarrollo. Esto me ayuda a comunicarme mejor dentro de un equipo, entender la lógica detrás de cada funcionalidad y construir proyectos más sólidos y escalables.
         </p>
         </div>
