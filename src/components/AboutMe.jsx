@@ -24,7 +24,7 @@ export const AboutMe = ()=>{
         <h1 className="font-bold text-white text-2xl">Sobre mi</h1>
         <p className="text-white mt-2">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
         <div className="flex flex-col xl:flex-row xl:justify-center xl:gap-8 xl:items-start mt-10 px-7">
-        <div className="flex flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130 h-170">
+        <div className="flex flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130 h-175">
         <div className="flex items-start gap-3 p-2">
         <User className="text-indigo-500" />
         <p className="font-bold text-white">Acerca de mi</p>
@@ -36,13 +36,13 @@ export const AboutMe = ()=>{
         Poseo conocimientos en Backend y bases de datos, lo que me permite comprender cómo funcionan las aplicaciones de forma integral y tener una visión más completa del desarrollo.
         </p>
         </div>
-        <div className="flex flex-col gap-3  bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130 h-170">
+        <div className="flex flex-col gap-3  bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130 h-175">
         <div className="flex items-start p-2 gap-3">
             <Star className="text-indigo-500" />
             <p className="font-bold text-white">Lo que me define</p>
         </div>
         <div className="flex items-start gap-3">
-          <Lightbulb className="text-indigo-500 mt-1" />
+          <Lightbulb className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
             <p className="m-0 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Pasión por lo que hago
@@ -53,7 +53,7 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <Crosshair className="text-indigo-500 mt-1" />
+          <Crosshair className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
             <p className="m-0 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Enfoque en el usuario
@@ -64,7 +64,7 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <GraduationCap  className="text-indigo-500 mt-1" />
+          <GraduationCap  className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
             <p className="m-0 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Aprendizaje constante
@@ -75,7 +75,7 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <Users className="text-indigo-500 mt-1" />
+          <Users className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
             <p className="m-0 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Trabajo en equipo
@@ -86,7 +86,7 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <CodeXml className="text-indigo-500 mt-1" />
+          <CodeXml className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
             <p className="m-0 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Atencion al detalle
@@ -97,7 +97,7 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <Rocket className="text-indigo-500 mt-1" />
+          <Rocket className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
             <p className="m-0 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Mentalidad de crecimiento
