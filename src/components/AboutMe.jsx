@@ -24,7 +24,7 @@ export const AboutMe = ()=>{
         <h1 className="font-bold text-white text-2xl">Sobre mi</h1>
         <p className="text-white mt-2">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
         <div className="flex flex-col xl:flex-row xl:justify-center xl:gap-8 xl:items-start mt-10 px-7">
-        <div className="flex flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130 h-175">
+        <div className="flex flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130">
         <div className="flex items-start gap-3 p-2">
         <User className="text-indigo-500" />
         <p className="font-bold text-white">Acerca de mi</p>
@@ -36,7 +36,7 @@ export const AboutMe = ()=>{
         Poseo conocimientos en Backend y bases de datos, lo que me permite comprender cómo funcionan las aplicaciones de forma integral y tener una visión más completa del desarrollo.
         </p>
         </div>
-        <div className="flex flex-col gap-3  bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130 h-175">
+        <div className="flex flex-col gap-3  bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-130">
         <div className="flex items-start p-2 gap-3">
             <Star className="text-indigo-500" />
             <p className="font-bold text-white">Lo que me define</p>
