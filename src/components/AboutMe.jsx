@@ -22,7 +22,7 @@ export const AboutMe = ()=>{
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
         <div className="text-center mt-20">
         <h1 className="font-bold text-zinc-300 text-2xl">Sobre mi</h1>
-        <p className="text-zinc-300 text-sm md:text-lg mt-2">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
+        <p className="text-zinc-300 text-sm md:text-lg mt-2 p-4 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
         <div className="flex flex-col xl:flex-row xl:justify-center xl:gap-12 xl:items-start mt-10 px-7">
         <div className="flex flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-md mt-5 xl:h-150">
         <div className="flex items-start gap-3 p-2">
