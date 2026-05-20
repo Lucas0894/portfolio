@@ -3,7 +3,7 @@ import lucas from "../assets/lucas.png"
 import { PiGithubLogoFill } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa"; 
 import { IoDocumentAttachOutline } from "react-icons/io5";
-import  LucasC_CV  from "../assets/Lucas_Caño_CV_Ingles.pdf"
+import  LucasC_CV  from "../assets/Lucas_Caño_CV_Español_2.pdf"
 import { TypeAnimation } from "react-type-animation";
 
 export const HeroSection = ()=>{
