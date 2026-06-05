@@ -87,9 +87,9 @@ export const Form = ()=>{
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}>
-    <section className=" min-h-screen flex justify-center items-center mt-10">
-    <div className="relative bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] mt-25 border rounded-md sm:p-5">
+    <section className=" min-h-screen flex flex-col justify-center items-center mt-10">
     <h1 className="text-zinc-300 text-center font-bold text-2xl mt-10">Contacto</h1> 
+    <div className="relative bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] mt-10 border rounded-md sm:p-5">
     <form id="contact" className="flex flex-col gap-4 items-center justify-center backdrop-blur-sm mt-8 p-5" onSubmit={handleSubmit}>
         <input name="nombre" className="w-75 sm:w-160 bg-zinc-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.nombre} onChange={(e)=>handleChange(e)} placeholder="Nombre y Apellido" />
         {errors.nombre && <p className="text-red-500 text-sm">{errors.nombre}</p>}
