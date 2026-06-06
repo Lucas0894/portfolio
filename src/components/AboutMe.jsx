@@ -119,7 +119,7 @@ export const AboutMe = ()=>{
             bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
             hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300 active:border-indigo-500/40
             active:shadow-[0_0_30px_rgba(99,102,241,0.20)]
-            active:-translate-y-1">
+            active:-translate-y-1 active:duration-500">
             <img
             src={html5}
             alt="React"
