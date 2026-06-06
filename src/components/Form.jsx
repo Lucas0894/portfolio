@@ -97,7 +97,7 @@ export const Form = ()=>{
         {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
         <input name="asunto" className="w-75 sm:w-160 bg-zinc-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.asunto} onChange={(e)=>handleChange(e)} placeholder="Asunto" />
         {errors.asunto && <p className="text-red-500 text-sm">{errors.asunto}</p>}
-        <textarea name="mensaje" className="w-75 sm:w-160 h-60 bg-zinc-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.mensaje} onChange={(e)=>handleChange(e)} placeholder="Mensaje" />
+        <textarea name="mensaje" className="resize-none w-75 sm:w-160 h-60 bg-zinc-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" value={form.mensaje} onChange={(e)=>handleChange(e)} placeholder="Mensaje" />
         {errors.mensaje && <p className="text-red-500 text-sm">{errors.mensaje}</p>}
         <button className="text-zinc-300 font-bold bg-indigo-600 p-2 w-75 sm:w-160 rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] transition transform hover:scale-105 duration-300">Enviar</button>
         {

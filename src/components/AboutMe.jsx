@@ -115,23 +115,217 @@ export const AboutMe = ()=>{
             <div className="mt-6 mx-4 mr-10 ml-10 bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-md">
             <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Frontend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
-            <img src={html5} height="55" width="55" />
-            <img src={css3}height="55" width="55" />
-            <img src={js} height="55" width="55" />
-            <img src={react} height="55" width="55" />
-            <img src={redux} height="55" width="55" />
-            <img src={tailwind} height="55" width="55" />
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300 active:border-indigo-500/40
+            active:shadow-[0_0_30px_rgba(99,102,241,0.20)]
+            active:-translate-y-1">
+            <img
+            src={html5}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Html
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={css3}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Css
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={js}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Javascript
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={react}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                React
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={redux}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Redux
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={tailwind}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Tailwind
+            </p>
+            </div>
             </div>
             </div>
             <div className="translate-y-12 xl:translate-y-18 mx-4 mr-10 ml-10 bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-md">
             <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Backend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
-            <img src={nodejs} height="55" width="55" />
-            <img src={mysql} height="55" width="55" />
-            <img src={postgresql} height="55" width="55" />
-            <img src={express} height="55" width="55" />
-            <img src={postman} height="55" width="55" />
-            <img src={git} height="55" width="55" />
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={nodejs}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                NodeJs
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={mysql}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Mysql
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={postgresql}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Postgres
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={express}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Express
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={postman}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Postman
+            </p>
+            </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
+            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <img
+            src={git}
+            alt="React"
+            className="
+            w-12 h-12
+            md:w-14 md:h-14
+            transition-transform
+            duration-300
+            hover:scale-110"
+            />
+            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+                Git
+            </p>
+            </div>
             </div>
             </div>
         </div>
