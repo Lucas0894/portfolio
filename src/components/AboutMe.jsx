@@ -12,8 +12,11 @@ import git from "../assets/git1.svg"
 import tailwind from "../assets/tailwind.svg"
 import { motion } from "framer-motion";
 import { Star, Crosshair, GraduationCap , Users, User, Lightbulb, CodeXml, Rocket } from 'lucide-react';
+import { useState } from "react"
 
 export const AboutMe = ()=>{
+    const [selectedTech, setSelectedTech] = useState(null)
+
     return (
         <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -115,14 +118,17 @@ export const AboutMe = ()=>{
             <div className="mt-6 mx-4 mr-10 ml-10 bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-md">
             <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Frontend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300 active:border-indigo-500/40
-            active:shadow-[0_0_30px_rgba(99,102,241,0.20)]
-            active:-translate-y-1 active:duration-500">
+            <div onClick={()=>setSelectedTech("html")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 
+            ${
+            selectedTech === "html"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={html5}
-            alt="React"
+            alt="Html"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -134,12 +140,16 @@ export const AboutMe = ()=>{
                 Html
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("css")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "css"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={css3}
-            alt="React"
+            alt="Css"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -151,12 +161,16 @@ export const AboutMe = ()=>{
                 Css
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("javascript")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "javascript"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={js}
-            alt="React"
+            alt="Javascript"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -168,9 +182,13 @@ export const AboutMe = ()=>{
                 Javascript
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>{setSelectedTech("react")}} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "react"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={react}
             alt="React"
@@ -185,12 +203,16 @@ export const AboutMe = ()=>{
                 React
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("redux")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "redux"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={redux}
-            alt="React"
+            alt="Redux"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -202,12 +224,16 @@ export const AboutMe = ()=>{
                 Redux
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("tailwind")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "tailwind"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={tailwind}
-            alt="React"
+            alt="Tailwind"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -224,12 +250,16 @@ export const AboutMe = ()=>{
             <div className="translate-y-12 xl:translate-y-18 mx-4 mr-10 ml-10 bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-md">
             <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Backend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("nodejs")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "nodejs"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={nodejs}
-            alt="React"
+            alt="Node"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -241,12 +271,16 @@ export const AboutMe = ()=>{
                 NodeJs
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("mysql")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border
+             transition-all duration-300 ${
+            selectedTech === "mysql"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={mysql}
-            alt="React"
+            alt="Mysql"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -258,12 +292,16 @@ export const AboutMe = ()=>{
                 Mysql
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("postgres")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "postgres"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={postgresql}
-            alt="React"
+            alt="Postgres"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -275,12 +313,16 @@ export const AboutMe = ()=>{
                 Postgres
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("express")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "express"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={express}
-            alt="React"
+            alt="Express"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -292,12 +334,16 @@ export const AboutMe = ()=>{
                 Express
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("postman")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "postman"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={postman}
-            alt="React"
+            alt="Postman"
             className="
             w-12 h-12
             md:w-14 md:h-14
@@ -309,12 +355,16 @@ export const AboutMe = ()=>{
                 Postman
             </p>
             </div>
-            <div className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] 
-            hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1 transition-all duration-300">
+            <div onClick={()=>setSelectedTech("git")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+            bg-[#18181b] border 
+             transition-all duration-300 ${
+            selectedTech === "git"
+            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            }`}>
             <img
             src={git}
-            alt="React"
+            alt="Git"
             className="
             w-12 h-12
             md:w-14 md:h-14
