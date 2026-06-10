@@ -23,11 +23,11 @@ export const AboutMe = ()=>{
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}>
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
-        <div className="text-center mt-20">
+        <div className="text-center mt-20 w-full max-w-[370px] xl:max-w-[1600px] mx-auto px-4">
         <h1 className="font-bold text-zinc-300 text-2xl">Sobre mi</h1>
         <p className="text-zinc-300 text-sm md:text-lg mt-2 pl-4 pr-4 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
-        <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-start mt-10 px-7">
-        <div className="flex flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-3xl mt-5 xl:h-150">
+        <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-start mt-10">
+        <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]  p-2 rounded-3xl mt-5 xl:h-150">
         <div className="flex items-start gap-3 p-2">
         <User className="text-indigo-500" />
         <p className="font-bold text-zinc-300 text-sm md:text-lg">Acerca de mi</p>
@@ -39,7 +39,7 @@ export const AboutMe = ()=>{
         Poseo conocimientos en Backend y bases de datos, lo que me permite comprender cómo funcionan las aplicaciones de forma integral y tener una visión más completa del desarrollo.
         </p>
         </div>
-        <div className="flex flex-col gap-3  bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] xl:w-[750px] p-2 rounded-3xl mt-5 xl:h-150">
+        <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]  p-2 rounded-3xl mt-5 xl:h-150">
         <div className="flex items-start p-2 gap-3">
             <Star className="text-indigo-500" />
             <p className="font-bold text-zinc-300 text-sm md:text-lg">Lo que me define</p>
@@ -115,7 +115,7 @@ export const AboutMe = ()=>{
             <h1 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Tecnologias y Herramientas que utilizo
             </h1>
-            <div className="mt-6 mx-4 mr-10 ml-10 bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
+            <div className="mt-6 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
             <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Frontend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
             <div onClick={()=>setSelectedTech("html")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
@@ -247,7 +247,7 @@ export const AboutMe = ()=>{
             </div>
             </div>
             </div>
-            <div className="translate-y-12 xl:translate-y-18 mx-4 mr-10 ml-10 bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
+            <div className="translate-y-12 xl:translate-y-18 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
             <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Backend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
             <div onClick={()=>setSelectedTech("nodejs")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
