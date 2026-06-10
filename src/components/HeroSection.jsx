@@ -34,12 +34,7 @@ export const HeroSection = ()=>{
         </div>
         </div>
         <div className="blob-wrapper w-60 h-60 xl:w-110 xl:h-110 translate-y-8 xl:translate-y-0">
-                <img style={{  boxShadow: `
-    0 0 10px #6366f1,
-    0 0 20px #6366f1,
-    0 0 30px #8b5cf6,
-    0 0 40px #8b5cf6
-  `}} alt="img Lucas" src={lucas} className="blob-image object-cover" />
+                <img style={{  boxShadow: `0 0 10px #6366f1, 0 0 20px #6366f1, 0 0 30px #8b5cf6, 0 0 40px #8b5cf6`}} alt="img Lucas" src={lucas} className="blob-image object-cover" />
         </div>
         </section>
         </motion.div>
