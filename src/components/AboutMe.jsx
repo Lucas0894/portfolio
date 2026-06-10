@@ -23,7 +23,7 @@ export const AboutMe = ()=>{
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}>
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
-        <div className="text-center mt-20 w-full max-w-[370px] xl:max-w-[1600px] mx-auto px-4">
+        <div className="text-center mt-20 w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
         <h1 className="font-bold text-zinc-300 text-2xl">Sobre mi</h1>
         <p className="text-zinc-300 text-sm md:text-lg mt-2 pl-4 pr-4 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
         <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-start mt-10">
