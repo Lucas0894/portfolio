@@ -25,17 +25,17 @@ export const AboutMe = ()=>{
         <section id="about" className="min-h-screen flex justify-center items-center mt-5">
         <div className="text-center mt-20 w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
         <h1 className="font-bold text-zinc-300 text-2xl">Sobre mi</h1>
-        <p className="text-zinc-300 text-sm md:text-lg mt-2 pl-4 pr-4 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
+        <p className="text-zinc-400 text-sm md:text-lg mt-2 pl-4 pr-4 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
         <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-start mt-10">
         <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]  p-2 rounded-3xl mt-5 xl:h-150">
         <div className="flex items-start gap-3 p-2">
         <User className="text-indigo-500" />
         <p className="font-bold text-zinc-300 text-sm md:text-lg">Acerca de mi</p>
         </div>
-        <p className="text-zinc-300 text-sm md:text-lg p-2 ">Soy desarrollador web con foco en Frontend, especializado en la creación de interfaces modernas, dinámicas y responsivas utilizando tecnologías como JavaScript y React. Me gusta desarrollar experiencias web que no solo se vean bien visualmente, sino que también sean intuitivas, accesibles y fáciles de usar para las personas. En cada proyecto priorizo la experiencia del usuario, el rendimiento de la aplicación y la escritura de código limpio y mantenible aplicando buenas prácticas de desarrollo. 
+        <p className="text-zinc-400 text-sm md:text-lg p-2 ">Soy desarrollador web con foco en Frontend, especializado en la creación de interfaces modernas, dinámicas y responsivas utilizando tecnologías como JavaScript y React. Me gusta desarrollar experiencias web que no solo se vean bien visualmente, sino que también sean intuitivas, accesibles y fáciles de usar para las personas. En cada proyecto priorizo la experiencia del usuario, el rendimiento de la aplicación y la escritura de código limpio y mantenible aplicando buenas prácticas de desarrollo. 
         </p> 
-        <p className="text-zinc-300 text-sm md:text-lg p-2">Me considero una persona curiosa, comprometida y en constante aprendizaje, siempre buscando mejorar mis habilidades y adaptarme a nuevas tecnologías y herramientas del ecosistema web.</p>
-        <p className="text-zinc-300 text-sm md:text-lg p-2">
+        <p className="text-zinc-400 text-sm md:text-lg p-2">Me considero una persona curiosa, comprometida y en constante aprendizaje, siempre buscando mejorar mis habilidades y adaptarme a nuevas tecnologías y herramientas del ecosistema web.</p>
+        <p className="text-zinc-400 text-sm md:text-lg p-2">
         Poseo conocimientos en Backend y bases de datos, lo que me permite comprender cómo funcionan las aplicaciones de forma integral y tener una visión más completa del desarrollo.
         </p>
         </div>
@@ -50,7 +50,7 @@ export const AboutMe = ()=>{
             <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Pasión por lo que hago
             </p>
-            <p className="m-0 text-zinc-300 text-sm md:text-lg">
+            <p className="m-0 text-zinc-400 text-sm md:text-lg">
                 Disfruto transformar ideas en experiencias digitales útiles y atractivas.
             </p>
         </div>
@@ -61,7 +61,7 @@ export const AboutMe = ()=>{
             <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Enfoque en el usuario
             </p>
-            <p className="m-0 text-zinc-300 text-sm md:text-lg">
+            <p className="m-0 text-zinc-400 text-sm md:text-lg">
                 Diseño y desarrollo pensando siempre en las necesidades reales de las personas.
             </p>
         </div>
@@ -72,7 +72,7 @@ export const AboutMe = ()=>{
             <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Aprendizaje constante
             </p>
-            <p className="m-0 text-zinc-300 text-sm md:text-lg">
+            <p className="m-0 text-zinc-400 text-sm md:text-lg">
                 La tecnologia evoluciona todos los dias y me mantengo en constante aprendizaje.
             </p>
         </div>
@@ -83,7 +83,7 @@ export const AboutMe = ()=>{
             <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Trabajo en equipo
             </p>
-            <p className="m-0 text-zinc-300 text-sm md:text-lg">
+            <p className="m-0 text-zinc-400 text-sm md:text-lg">
                 Me gusta colaborar, compartir ideas y construir soluciones junto a otros.
             </p>
         </div>
@@ -94,7 +94,7 @@ export const AboutMe = ()=>{
             <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Atencion al detalle
             </p>
-            <p className="m-0 text-zinc-300 text-sm md:text-lg">
+            <p className="m-0 text-zinc-400 text-sm md:text-lg">
                 Cuido cada detalle en el codigo y en el diseño para lograr productos de calidad.
             </p>
         </div>
@@ -105,7 +105,7 @@ export const AboutMe = ()=>{
             <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Mentalidad de crecimiento
             </p>
-            <p className="m-0 text-zinc-300 text-sm md:text-lg">
+            <p className="m-0 text-zinc-400 text-sm md:text-lg">
                 Siempre busco superarme, asumir nuevos retos y seguir creciendo profesionalmente.
             </p>
         </div>
@@ -136,7 +136,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Html
             </p>
             </div>
@@ -157,7 +157,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Css
             </p>
             </div>
@@ -178,7 +178,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Javascript
             </p>
             </div>
@@ -199,7 +199,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 React
             </p>
             </div>
@@ -220,7 +220,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Redux
             </p>
             </div>
@@ -241,7 +241,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Tailwind
             </p>
             </div>
@@ -267,7 +267,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 NodeJs
             </p>
             </div>
@@ -288,7 +288,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Mysql
             </p>
             </div>
@@ -309,7 +309,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Postgres
             </p>
             </div>
@@ -330,7 +330,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Express
             </p>
             </div>
@@ -351,7 +351,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Postman
             </p>
             </div>
@@ -372,7 +372,7 @@ export const AboutMe = ()=>{
             duration-300
             hover:scale-110"
             />
-            <p className="text-zinc-300 text-xs md:text-sm mt-3">
+            <p className="text-zinc-400 text-xs md:text-sm mt-3">
                 Git
             </p>
             </div>
