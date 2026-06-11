@@ -123,7 +123,7 @@ export const Projects = ()=>{
                   return (
                     <div onClick={()=>handleSelected(item.name)} key={i} className={`bg-[#202020] relative w-70 h-80 sm:w-115 sm:h-90 flex items-center justify-center transition transform hover:scale-105 rounded-3xl overflow-hidden shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer ${item.name === selected? "shadow-[0_0_15px_rgba(255,255,255,0.3)]": ""} transition duration-300`}>
                       <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300 border"/>
-                      <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-white text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
+                      <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-zinc-200 text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
                        group-hover:opacity-100 group-hover:bg-black/60`}>
                       {item.description}
                       <button className="p-2 m-2 sm:p-1 sm:m-1 bg-indigo-900 rounded-3xl cursor-pointer transition shadow-[0_0_15px_rgba(255,255,255,0.3)] transform hover:scale-110"> 
