@@ -112,6 +112,10 @@ export const AboutMe = ()=>{
         </div>
         </div>
         </div>
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}>
             <h1 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
                 Tecnologias y Herramientas que utilizo
             </h1>
@@ -247,6 +251,11 @@ export const AboutMe = ()=>{
             </div>
             </div>
             </div>
+            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}>
             <div className="translate-y-12 xl:translate-y-18 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
             <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Backend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
@@ -378,6 +387,7 @@ export const AboutMe = ()=>{
             </div>
             </div>
             </div>
+            </motion.div>
         </div>
         </section>
         </motion.div>
