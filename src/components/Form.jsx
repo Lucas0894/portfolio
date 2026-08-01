@@ -46,7 +46,7 @@ export const Form = ()=>{
     <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}>
+    transition={{ duration: 1 }}>
     <section className=" min-h-screen flex flex-col justify-center items-center mt-10">
     <h1 className="text-zinc-300 text-center font-bold text-2xl mt-10">Contacto</h1> 
     <div className="relative bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] mt-10 border border-white/5 rounded-3xl sm:p-5">
