@@ -47,8 +47,8 @@ export const Form = ()=>{
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}>
-    <section className=" min-h-screen flex flex-col justify-center items-center mt-10">
-    <div className="text-center w-full max-w-[360px] xl:max-w-[900px] mx-auto px-4">
+    <section id="contact" className=" min-h-screen flex flex-col justify-center items-center mt-10">
+    <div className="text-center w-full max-w-[360px] xl:max-w-[800px] mx-auto px-4">
     <div className="flex flex-col items-center">
     <div className="p-3 rounded-2xl bg-violet-500/10 border border-violet-500/20 shadow-[0_0_25px_rgba(124,58,237,0.15)]">
     <MessageCircle
@@ -64,7 +64,7 @@ export const Form = ()=>{
     </p>
     </div>
     <div className="relative w-full mx-auto bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] mt-10 border border-white/5 rounded-3xl p-2 sm:p-5">
-    <form id="contact" className="flex flex-col gap-4 items-center justify-center backdrop-blur-sm mt-8 p-5" onSubmit={handleSubmit(onSubmit)}>
+    <form className="flex flex-col gap-4 items-center justify-center backdrop-blur-sm mt-8 p-5" onSubmit={handleSubmit(onSubmit)}>
         <div className="relative w-full">
         <input {...register("nombre",{required: "El nombre es obligatorio"})} className="w-full border border-white/5 pl-10 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="Nombre y Apellido" />
         <User className="absolute left-2 top-1/2 -translate-y-1/2 text-indigo-700" />
