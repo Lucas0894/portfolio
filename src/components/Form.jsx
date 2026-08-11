@@ -82,7 +82,7 @@ export const Form = ()=>{
         <textarea {...register("mensaje",{required: "El mensaje es obligatorio"})} className="resize-none border border-white/5 text-zinc-200 transition-all duration-300 w-full pl-10 h-60 bg-zinc-800 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="Mensaje" />
         <MessageCircle className="absolute left-2 top-2 text-indigo-700" />
         </div>
-        <button className="text-zinc-300 font-bold bg-gradient-to-r from-violet-600 to-indigo-800 p-2 w-75 sm:w-160 rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] transition transform hover:scale-105 duration-300">Enviar mensaje</button>
+        <button className="text-zinc-300 font-bold bg-gradient-to-r from-violet-600 to-indigo-800 p-2 w-full rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] duration-300">Enviar mensaje</button>
         {
             sending?
             <div className={`absolute inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center rounded-md z-10`}>
