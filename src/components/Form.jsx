@@ -78,7 +78,7 @@ export const Form = ()=>{
         <input {...register("asunto",{required: "El asunto es obligatorio"})} className="w-full pl-10 border border-white/5 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="Asunto" />
         <Tag className="absolute left-2 top-1/2 -translate-y-1/2 text-indigo-700" />
         </div>
-        <div className="relative w-full border-white/5">
+        <div className="relative w-full">
         <textarea {...register("mensaje",{required: "El mensaje es obligatorio"})} className="resize-none border border-white/5 text-zinc-200 transition-all duration-300 w-full pl-10 h-60 bg-zinc-800 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="Mensaje" />
         <MessageCircle className="absolute left-2 top-2 text-indigo-700" />
         </div>
