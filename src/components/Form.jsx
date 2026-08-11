@@ -47,7 +47,7 @@ export const Form = ()=>{
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}>
-    <section id="contact" className=" min-h-screen flex flex-col justify-center items-center mt-10">
+    <section id="contact" className=" min-h-screen flex flex-col justify-center items-center mt-5">
     <div className="text-center w-full max-w-[360px] xl:max-w-[800px] mx-auto px-4">
     <div className="flex flex-col items-center">
     <div className="p-3 rounded-2xl bg-violet-500/10 border border-violet-500/20 shadow-[0_0_25px_rgba(124,58,237,0.15)]">
