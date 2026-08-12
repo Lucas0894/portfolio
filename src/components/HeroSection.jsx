@@ -13,7 +13,7 @@ export const HeroSection = ()=>{
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
-        <section id="home" className="min-h-screen container mx-auto flex flex-col justify-center items-center xl:-pt-20 xl:flex-row xl:mt-0 relative">
+        <section id="home" className="min-h-screen container mx-auto flex flex-col justify-center items-center xl:-pt-20 mt-5 xl:flex-row xl:mt-0 relative">
         <div className="text-center px-4">
         <h1 className="text-zinc-300 text-2xl xl:text-4xl"><TypeAnimation sequence={["Web Developer · ",1500, "", 500]} speed={50}repeat={Infinity}/><span className="text-violet-500">React</span></h1>
         <p className=" text-zinc-300 text-4xl xl:text-7xl font-semibold">Hola, soy {" "}<span className="text-violet-500">Lucas Caño.</span></p>
