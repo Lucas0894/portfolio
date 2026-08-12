@@ -97,13 +97,14 @@ export const Projects = ()=>{
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
-        <section id="projects" className="min-h-screen flex justify-center items-center mt-10">
-            <div>
+        <section id="projects" className="min-h-screen flex justify-center items-center ">
+          
+            <div className="w-full">
             <h1 className="text-zinc-300 font-bold text-2xl text-center">
                 Proyectos
             </h1>
-            <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo web.</p>
-            <div className="relative flex items-center justify-center w-full max-w-[1600px]">
+            <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2 w-full max-w-[360px] xl:max-w-[900px] mx-auto">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo web.</p>
+            <div className="relative flex items-center justify-center w-full max-w-[1600px] mx-auto">
             <button onClick={()=>{
               if(currentPage > 1){
                 setDirection("");
@@ -126,12 +127,12 @@ export const Projects = ()=>{
                       <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-zinc-200 text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
                        group-hover:opacity-100 group-hover:bg-black/60`}>
                       {item.description}
-                      <button className="p-2 m-2 sm:p-1 sm:m-1 bg-indigo-900 rounded-3xl cursor-pointer transition shadow-[0_0_15px_rgba(255,255,255,0.3)] transform hover:scale-110"> 
+                      <button className="p-2 m-2 sm:p-1 sm:m-1 bg-violet-900 rounded-3xl cursor-pointer transition border border-violet-500/40 hover:border-violet-500/40 hover:hover:shadow-[0_0_25px_rgba(124,58,237,0.5)] transform hover:scale-110"> 
                       <a className="p-3" href={item.gitHub}>Link Repositorio</a>
                       </button>
                       {
                         item.page?
-                        <button className="p-2 m-2 sm:p-1 sm:m-1 bg-indigo-900 rounded-3xl cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.3)] transition transform hover:scale-110"> 
+                        <button className="p-2 m-2 sm:p-1 sm:m-1 bg-violet-900 rounded-3xl cursor-pointer border border-violet-500/40 hover:border-violet-500/40 hover:hover:shadow-[0_0_25px_rgba(124,58,237,0.5)] transition transform hover:scale-110"> 
                         <a className="p-3" href={item.page}>Sitio Web</a>
                         </button>: ""
                       }

@@ -22,14 +22,14 @@ export const AboutMe = ()=>{
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
-        <section id="about" className="min-h-screen flex justify-center items-center mt-5">
+        <section id="about" className="min-h-screen flex justify-center items-center">
         <div className="text-center mt-20 w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
         <h1 className="font-bold text-zinc-300 text-2xl">Sobre mi</h1>
-        <p className="text-zinc-400 text-sm md:text-lg mt-2 pl-4 pr-4 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
+        <p className="text-zinc-400 text-sm md:text-lg mt-2 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
         <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-start mt-10">
         <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]  p-2 rounded-3xl mt-5 xl:h-150">
         <div className="flex items-start gap-3 p-2">
-        <User className="text-indigo-500" />
+        <User className="text-violet-500" />
         <p className="font-bold text-zinc-300 text-sm md:text-lg">Acerca de mi</p>
         </div>
         <p className="text-zinc-400 text-sm md:text-lg p-2 ">Soy desarrollador web con foco en Frontend, especializado en la creación de interfaces modernas, dinámicas y responsivas utilizando tecnologías como JavaScript y React. Me gusta desarrollar experiencias web que no solo se vean bien visualmente, sino que también sean intuitivas, accesibles y fáciles de usar para las personas. En cada proyecto priorizo la experiencia del usuario, el rendimiento de la aplicación y la escritura de código limpio y mantenible aplicando buenas prácticas de desarrollo. 
@@ -41,13 +41,13 @@ export const AboutMe = ()=>{
         </div>
         <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]  p-2 rounded-3xl mt-5 xl:h-150">
         <div className="flex items-start p-2 gap-3">
-            <Star className="text-indigo-500" />
+            <Star className="text-violet-500" />
             <p className="font-bold text-zinc-300 text-sm md:text-lg">Lo que me define</p>
         </div>
         <div className="flex items-start gap-3">
-          <Lightbulb className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
+          <Lightbulb className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
-            <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
+            <p className="m-0 text-sm md:text-lg text-violet-500">
                 Pasión por lo que hago
             </p>
             <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -56,9 +56,9 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <Crosshair className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
+          <Crosshair className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
-            <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
+            <p className="m-0 text-sm md:text-lg text-violet-500">
                 Enfoque en el usuario
             </p>
             <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -67,9 +67,9 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <GraduationCap  className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
+          <GraduationCap  className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
-            <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
+            <p className="m-0 text-sm md:text-lg text-violet-500">
                 Aprendizaje constante
             </p>
             <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -78,9 +78,9 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <Users className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
+          <Users className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
-            <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
+            <p className="m-0 text-sm md:text-lg text-violet-500">
                 Trabajo en equipo
             </p>
             <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -89,9 +89,9 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <CodeXml className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
+          <CodeXml className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
-            <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
+            <p className="m-0 text-sm md:text-lg text-violet-500">
                 Atencion al detalle
             </p>
             <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -100,9 +100,9 @@ export const AboutMe = ()=>{
         </div>
         </div>
         <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
-          <Rocket className="text-indigo-500 mt-1 shrink-0 w-6 h-6" />
+          <Rocket className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
           <div className="flex flex-col text-left">
-            <p className="m-0 text-sm md:text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
+            <p className="m-0 text-sm md:text-lg text-violet-500">
                 Mentalidad de crecimiento
             </p>
             <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -116,19 +116,19 @@ export const AboutMe = ()=>{
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
-            <h1 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">
+            <h1 className="text-2xl m-10 text-violet-500">
                 Tecnologias y Herramientas que utilizo
             </h1>
             <div className="mt-6 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
-            <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Frontend</h3>
+            <h3 className=" text-2xl m-10 text-violet-500">Frontend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
             <div onClick={()=>setSelectedTech("html")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
             bg-[#18181b] border 
              transition-all duration-300 
             ${
             selectedTech === "html"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={html5}
@@ -148,8 +148,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "css"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={css3}
@@ -169,8 +169,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "javascript"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={js}
@@ -190,8 +190,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "react"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={react}
@@ -211,8 +211,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "redux"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={redux}
@@ -232,8 +232,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "tailwind"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={tailwind}
@@ -257,14 +257,14 @@ export const AboutMe = ()=>{
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}>
             <div className="translate-y-12 xl:translate-y-18 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
-            <h3 className="text-transparent bg-clip-text text-2xl m-10 bg-gradient-to-r from-indigo-500 via-indigo-400 to-blue-400">Backend</h3>
+            <h3 className="text-2xl m-10 text-violet-500">Backend</h3>
             <div className="grid xl:grid-flow-col xl:grid-rows-1 grid-flow-col grid-rows-3 justify-items-center gap-6 mt-2 mb-10">
             <div onClick={()=>setSelectedTech("nodejs")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "nodejs"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={nodejs}
@@ -284,8 +284,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border
              transition-all duration-300 ${
             selectedTech === "mysql"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={mysql}
@@ -305,8 +305,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "postgres"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={postgresql}
@@ -326,8 +326,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "express"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={express}
@@ -347,8 +347,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "postman"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={postman}
@@ -368,8 +368,8 @@ export const AboutMe = ()=>{
             bg-[#18181b] border 
              transition-all duration-300 ${
             selectedTech === "git"
-            ? "border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.20)] hover:-translate-y-1"
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
             <img
             src={git}
