@@ -55,7 +55,7 @@ export const Projects = ()=>{
       id: 6,
       name: "weatherApp",
       image: weatherApp,
-      page: "https://weather-app-lucas0894s-projects.vercel.app/",
+      page: "https://weather-app-alpha-ten-c7jpokjvr8.vercel.app/",
       gitHub: "https://github.com/Lucas0894/weatherApp.git",
       description: "Weather app desarrollada en React que muestra el clima en tiempo real mediante APIs externas. Permite buscar ciudades, obtener datos por geolocalización y cuenta con diseño responsive adaptado a dispositivos móviles y desktop."
     }
