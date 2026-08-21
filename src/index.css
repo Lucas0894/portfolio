@@ -50,6 +50,36 @@ body {
   animation: slideInLeft 0.7s ease-in-out
 }
 
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-In-Top {
+  animation: slideInTop 0.7s ease-in-out;
+}
+
+.slide-In-Bottom {
+  animation: slideInBottom 0.7s ease-in-out;
+}
+
 .blob-wrapper {
   padding: 6px;
   display: inline-block;

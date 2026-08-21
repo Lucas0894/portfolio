@@ -104,26 +104,25 @@ export const Projects = ()=>{
                 Proyectos
             </h1>
             <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2 w-full max-w-[360px] xl:max-w-[900px] mx-auto">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo web.</p>
-            <div className="relative flex items-center justify-center w-full max-w-[1600px] mx-auto">
+            <div className="relative w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
             <button onClick={()=>{
               if(currentPage > 1){
                 setDirection("");
-                  setDirection("left")
+                  setDirection(window.innerWidth < 640? "top": "left")
                   setCurrentPage(currentPage - 1)
               }
-            }} className="z-10 absolute left-2 sm:-left-8 top-1/2 -translate-y-1/2 cursor-pointer text-white text-2xl hover:scale-110 transform  rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
-                >
-                  <ChevronsLeft />
+            }} className="z-10 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full mt-5 xl:-left-12 xl:top-1/2 xl:-translate-y-1/2 xl:translate-x-0 cursor-pointer text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition">
+                  <ChevronsLeft className="rotate-90 xl:rotate-0" />
                   
             </button>
-            <div className="mt-8 p-5 flex gap-3 items-center justify-center relative w-full ">
-            <div key={currentPage} className={`grid xl:grid-flow-col justify-items-center gap-7  ${direction === "left"? "slide-In-Left": "slide-In-Right"}`}>
+            <div className="mt-8 py-12 xl:py-5 flex items-center justify-center w-full">
+            <div key={currentPage} className={`grid grid-cols-1 xl:grid-cols-3 justify-items-center gap-7 ${direction === "top"? "slide-In-Top" : direction === "bottom" ? "slide-In-Bottom" : direction === "left" ? "slide-In-Left" : "slide-In-Right" }`}>
               {
                 currentProjects.map((item, i)=>{
 
                   return (
-                    <div onClick={()=>handleSelected(item.name)} key={i} className={`bg-[#202020] relative w-70 h-80 sm:w-115 sm:h-90 flex items-center justify-center transition transform hover:scale-105 rounded-3xl overflow-hidden cursor-pointer ${item.name === selected? "shadow-[0_0_30px_6px_rgba(124,58,237,0.45),0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]": "shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]"} transition duration-300`}>
-                      <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300 border"/>
+                    <div onClick={()=>handleSelected(item.name)} key={i} className={`bg-[#18181b] border relative w-full h-[400px] xl:w-[460px] xl:h-[390px] flex items-center justify-center transition transform hover:scale-105 rounded-3xl overflow-hidden cursor-pointer ${item.name === selected? "border-violet-500/40 shadow-[0_0_30px_6px_rgba(124,58,237,0.45),0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]": "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]"} transition duration-300`}>
+                      <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300"/>
                       <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-zinc-200 text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
                        group-hover:opacity-100 group-hover:bg-black/60`}>
                       {item.description}
@@ -148,12 +147,11 @@ export const Projects = ()=>{
             <button disabled={currentPage == totalPages} onClick={()=>{
               if(currentPage < totalPages){
                 setDirection("")
-                  setDirection("right")
+                  setDirection(window.innerWidth < 640? "bottom": "right")
                   setCurrentPage(currentPage + 1)
               }
-            }} className="absolute z-10 right-2 sm:-right-8 top-1/2 -translate-y-1/2 cursor-pointer  text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition"
-                >
-                  <ChevronsRight />
+            }} className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-full mt-5 xl:left-full xl:ml-5 xl:top-1/2 xl:bottom-auto xl:-translate-y-1/2 cursor-pointer text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition">
+                  <ChevronsRight className="-rotate-270 xl:rotate-0"  />
             </button>           
             </div>
             </div>
