@@ -7,56 +7,75 @@ import weatherApp from "../assets/weatherApp.png"
 import { useState, useEffect } from "react"
 import { ChevronsLeft, ChevronsRight  } from 'lucide-react';
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react"
 
 export const Projects = ()=>{
 
    const arrProject = [
     {
       id: 1,
-      name: "Videogame",
+      name: "Videogame App",
       image: videogamePage,
+      icon: "solar:gamepad-bold",
+      shortDescription: "Exploración y gestión de videojuegos" , 
+      technologies: ["React", "Redux", "React Router", "Javascript", "CSS", "Nodejs", "Express", "Sequelize", "PostgreSQL"],
       gitHub: "https://github.com/Lucas0894/AppVideogame",
       description: "Single Page Application (SPA) desarrollada para la exploración y gestión de videojuegos. Permite buscar títulos, ordenarlos alfabéticamente o por puntuación, y agregar videojuegos a una biblioteca personalizada con información como nombre e imagen."
 
     },
     {
       id: 2,
-      name: "foodProject",
+      name: "Food App",
       image: foodPage,
+      icon: "fluent:food-16-filled",
       gitHub: "https://github.com/Lucas0894/deployFood",
+      shortDescription: "Exploración de opciones gastronómicas", 
+      technologies: ["React", "Redux", "React Router", "Javascript", "CSS", "Nodejs", "Express", "Sequelize", "PostgreSQL"] ,
       description: "Single Page Application (SPA) enfocada en el descubrimiento y organización de recetas de cocina. Ofrece búsqueda interactiva, filtros de ordenamiento por nombre y valoración, y la posibilidad de guardar recetas en una colección personal con sus datos esenciales, como imagen e ingredientes."
     },
     {
       id: 3,
-      name: "reparoProject",
+      name: "Reparo.io",
       image: reparo,
+      icon: "mdi:tools",
       page: "https://reparoio.vercel.app/",
       gitHub: "https://github.com/Joel301/reparo_io_FrontEnd",
+      shortDescription: "E-commerce para conectar con tecnicos",
+      technologies: ["React", "Firebase", "Bootstrap", "Redux", "React Router", "Javascript", "Nodejs", "Express", "Sequelize", "PostgreSQL"],
       description: "Reparo.io es un ecommerce desarrollado en equipo (8 personas) bajo metodología Scrum, que conecta usuarios con técnicos especializados. Incluye autenticación, rol administrador y pasarela de pago integrada con Mercado Pago."
     },
     {
       id: 4,
-      name: "portfolio",
+      name: "Portfolio",
       image: portfolio,
+      icon: "zondicons:portfolio",
       page: "https://lucascano.vercel.app/",
       gitHub: "https://github.com/Lucas0894/portfolio",
+      shortDescription: "Portfolio para conocer mis proyectos, habilidades y experiencia.",
+      technologies: ["React", "React Router", "Javascript", "Tailwind", "Nodejs", "Express", "Nodemailer"],
       description: "Portfolio personal desarrollado para presentar mis proyectos, información sobre mí y enlaces a mis perfiles profesionales (GitHub y LinkedIn). Incluye una sección de contacto vía correo electrónico, descarga de CV, y fue construido con HTML, CSS y JavaScript, utilizando React y Tailwind CSS en el frontend, Express en el backend y Vercel para el despliegue."
     }, 
     {
       id: 5,
-      name: "todoList",
+      name: "Todo List",
       image: todoList,
+      icon: "lucide:list-todo",
       page: "https://todo-list-lucas-pi.vercel.app/",
       gitHub: "https://github.com/Lucas0894/todo_list.git",
+      shortDescription: "Organizador para listar tareas",
+      technologies: ["React", "Javascript", "Tailwind"],
       description: "Una aplicación para gestionar tareas diarias. Permite agregar, editar, marcar como completadas y eliminar tareas, con persistencia de datos en localStorage. Construida con React, TailwindCSS y Vite."
 
     },
     {
       id: 6,
-      name: "weatherApp",
+      name: "Weather App",
       image: weatherApp,
+      icon: "solar:cloud-sun-bold",
       page: "https://weather-app-alpha-ten-c7jpokjvr8.vercel.app/",
       gitHub: "https://github.com/Lucas0894/weatherApp.git",
+      shortDescription: "Clima en tiempo real",
+      technologies: ["React", "Javascript", "RapidAPI (Geocoding)", "Tailwind", "OpenWeather API"],
       description: "Weather app desarrollada en React que muestra el clima en tiempo real mediante APIs externas. Permite buscar ciudades, obtener datos por geolocalización y cuenta con diseño responsive adaptado a dispositivos móviles y desktop."
     }
    ];
@@ -122,7 +141,40 @@ export const Projects = ()=>{
 
                   return (
                     <div onClick={()=>handleSelected(item.name)} key={i} className={`bg-[#18181b] border relative w-full h-[400px] xl:w-[460px] xl:h-[390px] flex items-center justify-center transition transform hover:scale-105 rounded-3xl overflow-hidden cursor-pointer ${item.name === selected? "border-violet-500/40 shadow-[0_0_30px_6px_rgba(124,58,237,0.45),0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]": "border-white/5 hover:border-violet-500/40 hover:shadow-[0_0_30px_6px_rgba(124,58,237,0.45),0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]"} transition duration-300`}>
-                      <img src={item.image} className="w-full h-full object-contain object-center rounded-md cursor-pointer hover:grayscale hover:duration-300"/>
+                      <div className="w-full h-full flex flex-col">
+                        <div className="h-[220px] xl:h-[58%] overflow-hidden">
+                        <img src={item.image} className="w-full h-full object-cover object-top xl:object-contain xl:object-center rounded-md cursor-pointer hover:grayscale hover:duration-300"/>
+                        </div>
+                        <div className="flex items-center">
+                        <div className="w-18 h-18 m-3 shrink-0 rounded-2xl bg-gradient-to-br from-violet-600 to-violet-900 flex items-center justify-center">
+                        <Icon icon={item.icon} className="text-5xl text-white" />
+                        </div>
+                        <div className="flex flex-col justify-start">
+                        <div>
+                          {
+                            <h3 className="text-2xl font-bold text-white">{item.name}</h3>
+                          }
+                        </div>
+                        <div>
+                          {
+                            <h4 className="text-sm text-white">{item.shortDescription}</h4>
+                          }
+                        </div>
+                        </div>
+                        </div>
+                        <div className="flex ml-3 mt-3 flex-wrap gap-2">
+                          {
+                            item.technologies.slice(0, 4).map((tech)=>(
+                              <span className="text-xs px-3 py-1 font-medium text-violet-300 bg-violet-500/10 border border-violet-500/30 rounded-md" key={tech}>{tech}</span>
+                            ))
+                          }
+                          {
+                            item.technologies.length > 4 && (
+                              <span className="text-xs px-3 py-1 font-medium text-violet-300 bg-violet-500/10 border border-violet-500/30 rounded-md">+ {item.technologies.length - 4}</span>
+                            )
+                          }
+                        </div>
+                      </div>
                       <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-zinc-200 text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
                        group-hover:opacity-100 group-hover:bg-black/60`}>
                       {item.description}
