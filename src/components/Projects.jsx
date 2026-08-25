@@ -124,16 +124,21 @@ export const Projects = ()=>{
             </h1>
             <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2 w-full max-w-[360px] xl:max-w-[900px] mx-auto">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo web.</p>
             <div className="relative w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
-            <button onClick={()=>{
+            {
+              currentPage > 1 && (
+              <button onClick={()=>{
               if(currentPage > 1){
                 setDirection("");
                   setDirection(window.innerWidth < 640? "top": "left")
                   setCurrentPage(currentPage - 1)
               }
-            }} className="z-10 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full mt-5 xl:-left-12 xl:top-1/2 xl:-translate-y-1/2 xl:translate-x-0 cursor-pointer text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition">
+             }} className="z-10 absolute border border-violet-400 text-violet-400 top-0 left-1/2 -translate-x-1/2 -translate-y-full mt-5 xl:-left-12 xl:top-1/2 xl:-translate-y-1/2 xl:translate-x-0 cursor-pointer text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center transition duration-200">
                   <ChevronsLeft className="rotate-90 xl:rotate-0" />
                   
             </button>
+
+              )
+            }
             <div className="mt-8 py-12 xl:py-5 flex items-center justify-center w-full">
             <div key={currentPage} className={`grid grid-cols-1 xl:grid-cols-3 justify-items-center gap-7 ${direction === "top"? "slide-In-Top" : direction === "bottom" ? "slide-In-Bottom" : direction === "left" ? "slide-In-Left" : "slide-In-Right" }`}>
               {
@@ -196,15 +201,20 @@ export const Projects = ()=>{
               }
             </div>
             </div>
-            <button disabled={currentPage == totalPages} onClick={()=>{
+            {
+              currentPage < totalPages && (
+              <button disabled={currentPage == totalPages} onClick={()=>{
               if(currentPage < totalPages){
                 setDirection("")
                   setDirection(window.innerWidth < 640? "bottom": "right")
                   setCurrentPage(currentPage + 1)
               }
-            }} className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-full mt-5 xl:left-full xl:ml-5 xl:top-1/2 xl:bottom-auto xl:-translate-y-1/2 cursor-pointer text-white text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-700/80 transition">
+              }} className="absolute border border-violet-400 z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-full mt-5 xl:left-full xl:ml-5 xl:top-1/2 xl:bottom-auto xl:-translate-y-1/2 cursor-pointer text-violet-400 text-2xl hover:scale-110 transform rounded-full w-10 h-10 flex justify-center items-center transition duration-200">
                   <ChevronsRight className="-rotate-270 xl:rotate-0"  />
-            </button>           
+              </button>           
+
+              )
+            }
             </div>
             </div>
                       
