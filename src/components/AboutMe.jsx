@@ -11,7 +11,7 @@ import redux from "../assets/redux.svg"
 import git from "../assets/git1.svg"
 import tailwind from "../assets/tailwind.svg"
 import sequelize from "../assets/Sequelize.svg"
-import typescript from "../assets/Typescript.svg"
+import typescript from "../assets/TypeScript.svg"
 import { motion } from "framer-motion";
 import { Star, Crosshair, GraduationCap, Users, User, Lightbulb, CodeXml, Rocket } from 'lucide-react';
 import { useState } from "react"
