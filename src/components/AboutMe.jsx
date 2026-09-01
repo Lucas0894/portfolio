@@ -412,7 +412,7 @@ export const AboutMe = () => {
             hover:scale-110"
                                     />
                                     <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Sequelize
+                                        Sequeliz
                                     </p>
                                 </div>
                             </div>
