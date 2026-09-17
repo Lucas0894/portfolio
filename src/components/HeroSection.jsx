@@ -32,7 +32,7 @@ export const HeroSection = () => {
                         />
                     </div>
 
-                    <div className="order-2 xl:order-1 text-center w-full">
+                    <div className="order-2 mt-6 xl:mt-0 xl:order-1 text-center w-full">
                         <h1 className="text-zinc-300 text-2xl xl:text-4xl">
                             <TypeAnimation
                                 sequence={["Web Developer · ", 1500, "", 500]}
