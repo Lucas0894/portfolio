@@ -55,7 +55,7 @@ export const HeroSection = () => {
 
                         <div className="mt-8 xl:mt-20 flex justify-center items-center gap-2">
                             <a
-                                className="relative bg-[#18181b] border border-white/5 group inline-block rounded-2xl p-3 xl:p-4 xl:m-10 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer transition-transform hover:scale-110 hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.35),0_28px_55px_rgba(124,58,237,0.55)]"
+                                className="relative bg-[#18181b] border mr-4 border-white/5 group inline-block rounded-2xl p-3 xl:p-4 xl:m-10 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer transition-transform hover:scale-110 hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.35),0_28px_55px_rgba(124,58,237,0.55)]"
                                 href="https://github.com/Lucas0894"
                             >
                                 <div className="absolute text-white opacity-0 -top-16 bg-gray-900 group-hover:opacity-100 pointer-events-none transition-opacity left-1/2 -translate-x-1/2 p-2 rounded-full duration-200">
@@ -77,7 +77,7 @@ export const HeroSection = () => {
                             </a>
 
                             <a
-                                className="relative bg-[#18181b] border border-white/5 group inline-block rounded-2xl p-3 xl:p-4 xl:m-10 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer transition-transform hover:scale-110 hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.35),0_28px_55px_rgba(124,58,237,0.55)]"
+                                className="relative bg-[#18181b] border ml-4 border-white/5 group inline-block rounded-2xl p-3 xl:p-4 xl:m-10 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer transition-transform hover:scale-110 hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.35),0_28px_55px_rgba(124,58,237,0.55)]"
                                 href={LucasC_CV}
                                 download
                             >
