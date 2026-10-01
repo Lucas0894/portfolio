@@ -53,40 +53,9 @@ export const HeroSection = () => {
                             interfaces web claras, funcionales y responsivas con foco en UX.
                         </p>
 
-                        <div className="mt-8 xl:mt-20 flex justify-center items-center gap-2">
-                            <a
-                                className="relative bg-[#18181b] border mr-4 border-white/5 group inline-block rounded-2xl p-3 xl:p-4 xl:m-10 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer transition-transform hover:scale-110 hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.35),0_28px_55px_rgba(124,58,237,0.55)]"
-                                href="https://github.com/Lucas0894"
-                            >
-                                <div className="absolute text-white opacity-0 -top-16 bg-gray-900 group-hover:opacity-100 pointer-events-none transition-opacity left-1/2 -translate-x-1/2 p-2 rounded-full duration-200">
-                                    Github
-                                    <div className="absolute left-1/2 -translate-x-1/2 w-2 h-2 -bottom-1 rotate-45 bg-gray-900" />
-                                </div>
-                                <PiGithubLogoFill size={50} className="text-zinc-300" />
-                            </a>
-
-                            <a
-                                className="relative bg-[#18181b] border border-white/5 group inline-block rounded-2xl p-3 xl:p-4 xl:m-10 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer transition-transform hover:scale-110 hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.35),0_28px_55px_rgba(124,58,237,0.55)]"
-                                href="http://www.linkedin.com/in/lucas-ca%C3%B1o-0a5406223"
-                            >
-                                <div className="absolute text-white opacity-0 -top-16 bg-gray-900 group-hover:opacity-100 pointer-events-none transition-opacity left-1/2 -translate-x-1/2 p-2 rounded-full duration-200">
-                                    Linkedin
-                                    <div className="absolute left-1/2 -translate-x-1/2 w-2 h-2 -bottom-1 rotate-45 bg-gray-900" />
-                                </div>
-                                <FaLinkedinIn size={50} className="text-zinc-300" />
-                            </a>
-
-                            <a
-                                className="relative bg-[#18181b] border ml-4 border-white/5 group inline-block rounded-2xl p-3 xl:p-4 xl:m-10 shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] cursor-pointer transition-transform hover:scale-110 hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.35),0_28px_55px_rgba(124,58,237,0.55)]"
-                                href={LucasC_CV}
-                                download
-                            >
-                                <div className="absolute text-white opacity-0 -top-16 bg-gray-900 group-hover:opacity-100 pointer-events-none transition-opacity left-1/2 -translate-x-1/2 p-2 rounded-full duration-200">
-                                    CV
-                                    <div className="absolute left-1/2 -translate-x-1/2 w-2 h-2 -bottom-1 rotate-45 bg-gray-900" />
-                                </div>
-                                <IoDocumentAttachOutline size={50} className="text-zinc-300" />
-                            </a>
+                        <div className="mt-8 xl:mt-20 flex justify-center items-center gap-4">
+                            <a href="#projects" className="bg-gradient-to-r from-violet-600 to-indigo-800 text-zinc-100 font-semibold px-5 py-3 rounded-full shadow-[0_8px_30px_rgba(99,102,241,0.12)] hover:scale-105 transition-transform">Ver proyectos</a>
+                            <a href="#contact" className="border border-white/5 text-zinc-300 font-semibold px-5 py-3 rounded-full hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.18)] transition-all">Contactarme</a>
                         </div>
                     </div>
                 </div>
