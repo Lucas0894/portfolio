@@ -79,16 +79,21 @@ export const Form = () => {
 
                                             Soy desarrollador Fullstack, con experiencia en frontend y backend, trabajando con tecnologías como React, JavaScript, TypeScript, Node.js y bases de datos. Contame brevemente tu propuesta y hablemos.</p>
                                     </div>
-                                    <div className="flex flex-col gap-4 w-full items-stretch xl:gap-5 xl:mt-15">
+                                    <div className="flex flex-col gap-4 w-full items-stretch xl:gap-5 xl:mt-6">
                                         <a
                                             href="https://github.com/Lucas0894"
                                             aria-label="Github"
                                             className="relative bg-[#18181b] border border-white/5 group flex items-center w-full justify-start rounded-2xl px-4 py-3 sm:px-6 sm:py-4 shadow-[0_4px_16px_rgba(0,0,0,0.45)] hover:scale-[1.02] transition-transform hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.18),0_28px_55px_rgba(124,58,237,0.28)]"
                                         >
-                                            <PiGithubLogoFill size={22} className="text-zinc-300 mr-3 shrink-0" />
-                                            <span className="text-zinc-300 font-medium text-sm sm:text-lg">
-                                                Github
-                                            </span>
+                                            <PiGithubLogoFill size={24} className="text-zinc-300 mr-3 shrink-0" />
+                                            <div className="flex flex-col text-start">
+                                                <span className="text-zinc-400 font-medium text-sm sm:text-lg">
+                                                    Github
+                                                </span>
+                                                <span className="text-white text-xs sm:text-sm font-light">
+                                                    github.com/Lucas0894
+                                                </span>
+                                            </div>
                                         </a>
 
                                         <a
@@ -96,10 +101,15 @@ export const Form = () => {
                                             aria-label="Linkedin"
                                             className="relative bg-[#18181b] border border-white/5 group flex items-center w-full justify-start rounded-2xl px-4 py-3 sm:px-6 sm:py-4 shadow-[0_4px_16px_rgba(0,0,0,0.45)] hover:scale-[1.02] transition-transform hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.18),0_28px_55px_rgba(124,58,237,0.28)]"
                                         >
-                                            <FaLinkedinIn size={20} className="text-zinc-300 mr-3 shrink-0" />
-                                            <span className="text-zinc-300 font-medium text-sm sm:text-lg">
-                                                Linkedin
-                                            </span>
+                                            <FaLinkedinIn size={24} className="text-zinc-300 mr-3 shrink-0" />
+                                            <div className="flex flex-col text-start">
+                                                <span className="text-zinc-400 font-medium text-sm sm:text-lg">
+                                                    Linkedin
+                                                </span>
+                                                <span className="text-white text-xs sm:text-sm font-light">
+                                                    linkedin.com/in/lucas-caño
+                                                </span>
+                                            </div>
                                         </a>
 
                                         <a
@@ -108,10 +118,15 @@ export const Form = () => {
                                             aria-label="CV"
                                             className="relative bg-[#18181b] border border-white/5 group flex items-center w-full justify-start rounded-2xl px-4 py-3 sm:px-6 sm:py-4 shadow-[0_4px_16px_rgba(0,0,0,0.45)] hover:scale-[1.02] transition-transform hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.18),0_28px_55px_rgba(124,58,237,0.28)]"
                                         >
-                                            <IoDocumentAttachOutline size={20} className="text-zinc-300 mr-3 shrink-0" />
-                                            <span className="text-zinc-300 font-medium text-sm sm:text-lg">
-                                                CV
-                                            </span>
+                                            <IoDocumentAttachOutline size={24} className="text-zinc-300 mr-3 shrink-0" />
+                                            <div className="flex flex-col text-start">
+                                                <span className="text-zinc-400 font-medium text-sm sm:text-lg">
+                                                    CV
+                                                </span>
+                                                <span className="text-white text-xs sm:text-sm font-light">
+                                                    Descarga mi CV
+                                                </span>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
