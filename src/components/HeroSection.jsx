@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
 import lucas from "../assets/lucas.png"
-import { PiGithubLogoFill } from "react-icons/pi";
-import { FaLinkedinIn } from "react-icons/fa";
-import { IoDocumentAttachOutline } from "react-icons/io5";
-import LucasC_CV from "../assets/Lucas_Cano_CV.pdf"
 import { TypeAnimation } from "react-type-animation";
 
 export const HeroSection = () => {
@@ -47,10 +43,10 @@ export const HeroSection = () => {
                         </p>
 
                         <p className="text-zinc-400 text-sm md:text-lg mt-6 mx-auto max-w-2xl">
-                            Desarrollador Web especializado en{" "}
+                            Desarrollador Fullstack especializado en{" "}
                             <span className="font-bold">React</span> y{" "}
                             <span className="font-bold">JavaScript</span>, enfocado en crear
-                            interfaces web claras, funcionales y responsivas con foco en UX.
+                            interfaces claras, funcionales y responsivas con foco en UX.
                         </p>
 
                         <div className="mt-8 xl:mt-20 flex justify-center items-center gap-4">
