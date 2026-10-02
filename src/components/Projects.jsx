@@ -122,7 +122,7 @@ export const Projects = () => {
           <h1 className="text-zinc-300 font-bold text-2xl text-center">
             Proyectos
           </h1>
-          <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2 w-full max-w-[360px] xl:max-w-[900px] mx-auto">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo web.</p>
+          <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2 w-full max-w-[360px] xl:max-w-[900px] mx-auto">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo Fullstack.</p>
           <div className="relative w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
             {
               currentPage > 1 && (
