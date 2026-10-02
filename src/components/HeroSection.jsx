@@ -54,8 +54,8 @@ export const HeroSection = () => {
                         </p>
 
                         <div className="mt-8 xl:mt-20 flex justify-center items-center gap-4">
-                            <a href="#projects" className="bg-gradient-to-r from-violet-600 to-indigo-800 text-zinc-100 font-semibold px-5 py-3 rounded-full shadow-[0_8px_30px_rgba(99,102,241,0.12)] hover:scale-105 transition-transform">Ver proyectos</a>
-                            <a href="#contact" className="border border-white/5 text-zinc-300 font-semibold px-5 py-3 rounded-full hover:border-violet-500/40 hover:shadow-[0_6px_16px_rgba(124,58,237,0.18)] transition-all">Contactarme</a>
+                            <a href="#projects" className="bg-gradient-to-r from-violet-600 to-indigo-800 text-zinc-100 font-semibold px-5 py-3 rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.45)] hover:scale-105 transition-transform">Ver proyectos</a>
+                            <a href="#contact" className="border border-white/5 text-zinc-300 font-semibold px-5 py-3 rounded-full hover:border-violet-500/40 shadow-[0_4px_16px_rgba(0,0,0,0.45)] hover:shadow-[0_6px_16px_rgba(124,58,237,0.18)] transition-all">Contactarme</a>
                         </div>
                     </div>
                 </div>
