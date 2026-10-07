@@ -110,7 +110,6 @@ export const Projects = () => {
       setSelected(select)
   }
 
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
