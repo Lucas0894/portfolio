@@ -5,17 +5,14 @@ import { Projects } from "./Projects"
 import { Form } from "./Form"
 import { Footer } from "./Footer"
 
-export const Home = ()=>{
+export const Home = () => {
     return (
         <>
-        
-        
-          
-          <HeroSection />
-          <AboutMe />
-          <Projects />
-          <Form />
-          <Footer />
+            <HeroSection />
+            <AboutMe />
+            <Projects />
+            <Form />
+            <Footer />
         </>
     )
 }
