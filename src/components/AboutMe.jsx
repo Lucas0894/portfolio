@@ -175,7 +175,7 @@ export const AboutMe = () => {
                                             label={tech.label}
                                             icon={tech.icon}
                                             alt={tech.alt}
-                                            className={isLastOddItem ? "col-span-2 justify-self-center sm:col-span-1 sm:justify-self-auto" : ""}
+                                            className={isLastOddItem ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto" : ""}
                                         />
                                     );
                                 })}
@@ -199,7 +199,7 @@ export const AboutMe = () => {
                                             label={tech.label}
                                             icon={tech.icon}
                                             alt={tech.alt}
-                                            className={isLastOddItem ? "col-span-2 justify-self-center sm:col-span-1 sm:justify-self-auto" : ""}
+                                            className={isLastOddItem ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto" : ""}
                                         />
                                     );
                                 })}
