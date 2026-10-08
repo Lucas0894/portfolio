@@ -44,15 +44,15 @@ export const AboutMe = () => {
             type="button"
             key={id}
             onClick={() => setSelectedTech(id)}
-            className={`group flex w-full max-w-[120px] aspect-square flex-col items-center justify-center rounded-2xl bg-[#18181b] border transition-all duration-300 ${selectedTech === id
-                ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
+            className={`group flex w-full max-w-[120px] aspect-square flex-col items-center justify-center rounded-2xl bg-[#18181b] border transform-gpu transition-[transform,box-shadow,border-color,background-color] duration-300 ease-out ${selectedTech === id
+                ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1 scale-[1.02]"
+                : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1 active:scale-[0.98]"
                 } ${className}`}
         >
             <img
                 src={icon}
                 alt={alt}
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-110"
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 transition-transform duration-300 ease-out group-hover:scale-110"
             />
             <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm mt-2 text-center">
                 {label}
