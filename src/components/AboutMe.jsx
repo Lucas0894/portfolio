@@ -39,7 +39,7 @@ export const AboutMe = () => {
         { id: "sequelize", label: "Sequelize", icon: sequelize, alt: "Sequelize" },
     ]
 
-    const TechCard = ({ id, label, icon, alt }) => (
+    const TechCard = ({ id, label, icon, alt, className = "" }) => (
         <button
             type="button"
             key={id}
@@ -47,7 +47,7 @@ export const AboutMe = () => {
             className={`group flex w-full max-w-[120px] aspect-square flex-col items-center justify-center rounded-2xl bg-[#18181b] border transition-all duration-300 ${selectedTech === id
                 ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
                 : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                }`}
+                } ${className}`}
         >
             <img
                 src={icon}
@@ -165,15 +165,20 @@ export const AboutMe = () => {
                         <div className="mt-6 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
                             <h3 className=" text-2xl m-10 text-violet-500">Frontend</h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 justify-items-center gap-4 sm:gap-5 md:gap-6 mt-2 mb-10 mx-auto max-w-[1000px] xl:max-w-none">
-                                {frontendTech.map((tech) => (
-                                    <TechCard
-                                        key={tech.id}
-                                        id={tech.id}
-                                        label={tech.label}
-                                        icon={tech.icon}
-                                        alt={tech.alt}
-                                    />
-                                ))}
+                                {frontendTech.map((tech, index) => {
+                                    const isLastOddItem = frontendTech.length % 2 !== 0 && index === frontendTech.length - 1;
+
+                                    return (
+                                        <TechCard
+                                            key={tech.id}
+                                            id={tech.id}
+                                            label={tech.label}
+                                            icon={tech.icon}
+                                            alt={tech.alt}
+                                            className={isLastOddItem ? "col-span-2 justify-self-center sm:col-span-1 sm:justify-self-auto" : ""}
+                                        />
+                                    );
+                                })}
                             </div>
                         </div>
                     </motion.div>
@@ -184,15 +189,20 @@ export const AboutMe = () => {
                         <div className="translate-y-12 xl:translate-y-18 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
                             <h3 className="text-2xl m-10 text-violet-500">Backend</h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 justify-items-center gap-4 sm:gap-5 md:gap-6 mt-2 mb-10 mx-auto max-w-[1000px] xl:max-w-none">
-                                {backendTech.map((tech) => (
-                                    <TechCard
-                                        key={tech.id}
-                                        id={tech.id}
-                                        label={tech.label}
-                                        icon={tech.icon}
-                                        alt={tech.alt}
-                                    />
-                                ))}
+                                {backendTech.map((tech, index) => {
+                                    const isLastOddItem = backendTech.length % 2 !== 0 && index === backendTech.length - 1;
+
+                                    return (
+                                        <TechCard
+                                            key={tech.id}
+                                            id={tech.id}
+                                            label={tech.label}
+                                            icon={tech.icon}
+                                            alt={tech.alt}
+                                            className={isLastOddItem ? "col-span-2 justify-self-center sm:col-span-1 sm:justify-self-auto" : ""}
+                                        />
+                                    );
+                                })}
                             </div>
                         </div>
                     </motion.div>
