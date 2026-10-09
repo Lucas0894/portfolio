@@ -16,8 +16,55 @@ import { motion } from "framer-motion";
 import { Star, Crosshair, GraduationCap, Users, User, Lightbulb, CodeXml, Rocket } from 'lucide-react';
 import { useState } from "react"
 
+const TechCard = ({ tech, selectedTech, setSelectedTech }) => (
+    <div 
+        onClick={() => setSelectedTech(tech.id)} 
+        className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
+        bg-[#18181b] border 
+        transition-all duration-300 
+        ${selectedTech === tech.id
+            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
+        }`}>
+        <img
+            src={tech.icon}
+            alt={tech.name}
+            className="
+        w-12 h-12
+        md:w-14 md:h-14
+        transition-transform
+        duration-300
+        hover:scale-110"
+        />
+        <p className="text-zinc-400 text-xs md:text-sm mt-3">
+            {tech.name}
+        </p>
+    </div>
+)
+
 export const AboutMe = () => {
     const [selectedTech, setSelectedTech] = useState(null)
+
+    const technologies = {
+        frontend: [
+            { id: "html", name: "Html", icon: html5 },
+            { id: "css", name: "Css", icon: css3 },
+            { id: "javascript", name: "Javascript", icon: js },
+            { id: "react", name: "React", icon: react },
+            { id: "redux", name: "Redux", icon: redux },
+            { id: "tailwind", name: "Tailwind", icon: tailwind },
+            { id: "typescript", name: "Typescript", icon: typescript },
+        ],
+        backend: [
+            { id: "nodejs", name: "NodeJs", icon: nodejs },
+            { id: "mysql", name: "Mysql", icon: mysql },
+            { id: "postgres", name: "Postgres", icon: postgresql },
+            { id: "express", name: "Express", icon: express },
+            { id: "postman", name: "Postman", icon: postman },
+            { id: "git", name: "Git", icon: git },
+            { id: "sequelize", name: "Sequeliz", icon: sequelize },
+        ]
+    }
 
     return (
         <motion.div
@@ -124,147 +171,11 @@ export const AboutMe = () => {
                         <div className="mt-6 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
                             <h3 className=" text-2xl m-10 text-violet-500">Frontend</h3>
                             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 justify-items-center gap-6 mt-2 mb-10">
-                                <div onClick={() => setSelectedTech("html")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 
-            ${selectedTech === "html"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={html5}
-                                        alt="Html"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Html
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("css")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "css"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={css3}
-                                        alt="Css"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Css
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("javascript")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "javascript"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={js}
-                                        alt="Javascript"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Javascript
-                                    </p>
-                                </div>
-                                <div onClick={() => { setSelectedTech("react") }} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "react"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={react}
-                                        alt="React"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        React
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("redux")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "redux"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={redux}
-                                        alt="Redux"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Redux
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("tailwind")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "tailwind"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={tailwind}
-                                        alt="Tailwind"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Tailwind
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("typescript")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl col-span-2 justify-self-center md:col-span-1 md:justify-self-auto
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "typescript"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={typescript}
-                                        alt="Typescript"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Typescript
-                                    </p>
-                                </div>
+                                {technologies.frontend.map((tech) => (
+                                    <div key={tech.id} className={tech.id === "typescript" ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto" : ""}>
+                                        <TechCard tech={tech} selectedTech={selectedTech} setSelectedTech={setSelectedTech} />
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </motion.div>
@@ -275,146 +186,11 @@ export const AboutMe = () => {
                         <div className="translate-y-12 xl:translate-y-18 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
                             <h3 className="text-2xl m-10 text-violet-500">Backend</h3>
                             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 justify-items-center gap-6 mt-2 mb-10">
-                                <div onClick={() => setSelectedTech("nodejs")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "nodejs"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={nodejs}
-                                        alt="Node"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        NodeJs
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("mysql")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border
-             transition-all duration-300 ${selectedTech === "mysql"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={mysql}
-                                        alt="Mysql"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Mysql
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("postgres")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "postgres"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={postgresql}
-                                        alt="Postgres"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Postgres
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("express")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "express"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={express}
-                                        alt="Express"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Express
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("postman")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "postman"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={postman}
-                                        alt="Postman"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Postman
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("git")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "git"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={git}
-                                        alt="Git"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Git
-                                    </p>
-                                </div>
-                                <div onClick={() => setSelectedTech("sequelize")} className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl col-span-2 justify-self-center md:col-span-1 md:justify-self-auto
-            bg-[#18181b] border 
-             transition-all duration-300 ${selectedTech === "sequelize"
-                                        ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                                        : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)]  hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-                                    }`}>
-                                    <img
-                                        src={sequelize}
-                                        alt="Sequelize"
-                                        className="
-            w-12 h-12
-            md:w-14 md:h-14
-            transition-transform
-            duration-300
-            hover:scale-110"
-                                    />
-                                    <p className="text-zinc-400 text-xs md:text-sm mt-3">
-                                        Sequeliz
-                                    </p>
-                                </div>
+                                {technologies.backend.map((tech) => (
+                                    <div key={tech.id} className={tech.id === "sequelize" ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto" : ""}>
+                                        <TechCard tech={tech} selectedTech={selectedTech} setSelectedTech={setSelectedTech} />
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </motion.div>
