@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { RingLoader } from "react-spinners"
 import { motion } from "framer-motion";
-import { User, Mail, Tag, MessageCircle } from "lucide-react"
+import { User, Mail, Tag, MessageCircle, Check, X } from "lucide-react"
 import { PiGithubLogoFill } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoDocumentAttachOutline } from "react-icons/io5";
@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form"
 export const Form = () => {
     const API_URL = import.meta.env.VITE_API_URL;
     const [sending, setSending] = useState(false)
+    const [status, setStatus] = useState(null)
 
     const {
         register,
@@ -22,6 +23,7 @@ export const Form = () => {
 
     const onSubmit = async (data) => {
         setSending(true)
+        setStatus(null)
         try {
             const res = await fetch(`https://backend-portfolio-7c6b.onrender.com/send`, {
                 method: "POST",
@@ -32,15 +34,18 @@ export const Form = () => {
             const result = await res.json();
             console.log(result)
             if (result.success) {
-                alert("correo enviado correctamente")
+                setStatus('success')
                 reset()
+                setTimeout(() => setStatus(null), 3000)
             } else {
-                alert("el mensaje no se envio")
+                setStatus('error')
+                setTimeout(() => setStatus(null), 3000)
             }
 
         } catch (error) {
             console.error(error)
-            alert("error en el servidor")
+            setStatus('error')
+            setTimeout(() => setStatus(null), 3000)
         } finally {
             setSending(false)
         }
@@ -133,30 +138,118 @@ export const Form = () => {
                             </aside>
 
                             <div className="relative w-full xl:w-[60%] mx-auto bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] border border-white/5 rounded-3xl p-4 sm:p-6 xl:p-8 xl:pl-12 h-full">
-                                <form className="flex flex-col gap-4 items-center xl:items-start justify-center backdrop-blur-sm mt-8 p-2 sm:p-5 w-full h-full" onSubmit={handleSubmit(onSubmit)}>
+                                <form className="flex flex-col gap-4 items-center xl:items-start justify-center backdrop-blur-sm mt-8 p-2 sm:p-5 w-full h-full relative" onSubmit={handleSubmit(onSubmit)}>
                                     <div className="relative w-full">
-                                        <input {...register("nombre", { required: "El nombre es obligatorio" })} className="w-full border border-white/5 pl-10 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="Nombre y Apellido" />
+                                        <input disabled={sending} {...register("nombre", { required: "El nombre es obligatorio" })} className="w-full border border-white/5 pl-10 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Nombre y Apellido" />
                                         <User className="absolute left-2 top-1/2 -translate-y-1/2 text-violet-500" />
                                     </div>
                                     <div className="relative w-full">
-                                        <input type="email" {...register("email", { required: "El email es obligatorio", pattern: { value: /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/ } })} className="w-full pl-10 border border-white/5 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="E-mail" />
+                                        <input type="email" disabled={sending} {...register("email", { required: "El email es obligatorio", pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ } })} className="w-full pl-10 border border-white/5 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="E-mail" />
                                         <Mail className="absolute left-2 top-1/2 -translate-y-1/2 text-violet-500" />
                                     </div>
                                     <div className="relative w-full">
-                                        <input {...register("asunto", { required: "El asunto es obligatorio" })} className="w-full pl-10 border border-white/5 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="Asunto" />
+                                        <input disabled={sending} {...register("asunto", { required: "El asunto es obligatorio" })} className="w-full pl-10 border border-white/5 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Asunto" />
                                         <Tag className="absolute left-2 top-1/2 -translate-y-1/2 text-violet-500" />
                                     </div>
                                     <div className="relative w-full">
-                                        <textarea {...register("mensaje", { required: "El mensaje es obligatorio" })} className="resize-none border border-white/5 text-zinc-200 transition-all duration-300 w-full pl-10 h-60 xl:h-72 bg-zinc-800 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700" placeholder="Mensaje" />
+                                        <textarea disabled={sending} {...register("mensaje", { required: "El mensaje es obligatorio" })} className="resize-none border border-white/5 text-zinc-200 transition-all duration-300 w-full pl-10 h-60 xl:h-72 bg-zinc-800 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Mensaje" />
                                         <MessageCircle className="absolute left-2 top-2 text-violet-500" />
                                     </div>
-                                    <button className="text-zinc-300 font-bold bg-gradient-to-r from-violet-600 to-indigo-800 p-2 w-full rounded-md cursor-pointer hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)] duration-300">Enviar mensaje</button>
-                                    {sending ? (
-                                        <div className={`absolute inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center rounded-md z-10`}>
+                                    <button disabled={sending} className="text-zinc-300 font-bold bg-gradient-to-r from-violet-600 to-indigo-800 p-2 w-full rounded-md transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-none hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)]">
+                                        {sending ? "Enviando..." : "Enviar mensaje"}
+                                    </button>
+                                    {sending && !status && (
+                                        <motion.div 
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            className="absolute inset-0 bg-black/70 backdrop-blur-md flex flex-col items-center justify-center rounded-2xl z-10 gap-4"
+                                        >
                                             <RingLoader size={70} color="rgba(31, 26, 97, 1)" />
-                                        </div>
-                                    ) : (
-                                        ""
+                                            <motion.p
+                                                animate={{ opacity: [1, 0.6, 1] }}
+                                                transition={{ duration: 1.5, repeat: Infinity }}
+                                                className="text-zinc-300 font-medium text-lg"
+                                            >
+                                                Enviando<motion.span animate={{ opacity: [0, 1, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>.</motion.span>
+                                            </motion.p>
+                                        </motion.div>
+                                    )}
+                                    {status === 'success' && (
+                                        <motion.div 
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            exit={{ opacity: 0, scale: 0.8 }}
+                                            className="absolute inset-0 bg-black/70 backdrop-blur-md flex flex-col items-center justify-center rounded-2xl z-10 gap-4"
+                                        >
+                                            <motion.div
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1 }}
+                                                transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                                                className="relative"
+                                            >
+                                                <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                                                    <motion.div
+                                                        initial={{ pathLength: 0 }}
+                                                        animate={{ pathLength: 1 }}
+                                                        transition={{ duration: 0.6, delay: 0.2 }}
+                                                    >
+                                                        <Check size={56} className="text-white" strokeWidth={3} />
+                                                    </motion.div>
+                                                </div>
+                                            </motion.div>
+                                            <motion.p
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: 0.4 }}
+                                                className="text-green-400 font-bold text-xl"
+                                            >
+                                                ¡Mensaje enviado!
+                                            </motion.p>
+                                            <motion.p
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ delay: 0.6 }}
+                                                className="text-zinc-300 text-sm"
+                                            >
+                                                Te responderé pronto
+                                            </motion.p>
+                                        </motion.div>
+                                    )}
+                                    {status === 'error' && (
+                                        <motion.div 
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            exit={{ opacity: 0, scale: 0.8 }}
+                                            className="absolute inset-0 bg-black/70 backdrop-blur-md flex flex-col items-center justify-center rounded-2xl z-10 gap-4"
+                                        >
+                                            <motion.div
+                                                initial={{ scale: 0, rotate: -180 }}
+                                                animate={{ scale: 1, rotate: 0 }}
+                                                transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                                                className="relative"
+                                            >
+                                                <div className="w-24 h-24 bg-gradient-to-r from-red-500 to-rose-600 rounded-full flex items-center justify-center">
+                                                    <X size={56} className="text-white" strokeWidth={3} />
+                                                </div>
+                                            </motion.div>
+                                            <motion.p
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: 0.4 }}
+                                                className="text-red-400 font-bold text-xl"
+                                            >
+                                                Error al enviar
+                                            </motion.p>
+                                            <motion.p
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ delay: 0.6 }}
+                                                className="text-zinc-300 text-sm text-center"
+                                            >
+                                                Intenta de nuevo en unos momentos
+                                            </motion.p>
+                                        </motion.div>
                                     )}
                                 </form>
                             </div>
