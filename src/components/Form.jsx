@@ -1,7 +1,6 @@
 import { useState } from "react"
-import { RingLoader } from "react-spinners"
 import { motion } from "framer-motion";
-import { User, Mail, Tag, MessageCircle, Check, X } from "lucide-react"
+import { User, Mail, Tag, MessageCircle, Check, X, LoaderCircle } from "lucide-react"
 import { PiGithubLogoFill } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoDocumentAttachOutline } from "react-icons/io5";
@@ -138,7 +137,7 @@ export const Form = () => {
                             </aside>
 
                             <div className="relative w-full xl:w-[60%] mx-auto bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] border border-white/5 rounded-3xl p-4 sm:p-6 xl:p-8 xl:pl-12 h-full">
-                                <form className="flex flex-col gap-4 items-center xl:items-start justify-center backdrop-blur-sm mt-8 p-2 sm:p-5 w-full h-full relative" onSubmit={handleSubmit(onSubmit)}>
+                                <form aria-busy={sending} className="flex flex-col gap-4 items-center xl:items-start justify-center backdrop-blur-sm mt-8 p-2 sm:p-5 w-full h-full relative" onSubmit={handleSubmit(onSubmit)}>
                                     <div className="relative w-full">
                                         <input disabled={sending} {...register("nombre", { required: "El nombre es obligatorio" })} className="w-full border border-white/5 pl-10 text-zinc-200 bg-zinc-800 transition-all duration-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Nombre y Apellido" />
                                         <User className="absolute left-2 top-1/2 -translate-y-1/2 text-violet-500" />
@@ -155,26 +154,10 @@ export const Form = () => {
                                         <textarea disabled={sending} {...register("mensaje", { required: "El mensaje es obligatorio" })} className="resize-none border border-white/5 text-zinc-200 transition-all duration-300 w-full pl-10 h-60 xl:h-72 bg-zinc-800 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Mensaje" />
                                         <MessageCircle className="absolute left-2 top-2 text-violet-500" />
                                     </div>
-                                    <button disabled={sending} className="text-zinc-300 font-bold bg-gradient-to-r from-violet-600 to-indigo-800 p-2 w-full rounded-md transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-none hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)]">
+                                    <button disabled={sending} aria-live="polite" className="text-zinc-300 font-bold bg-gradient-to-r from-violet-600 to-indigo-800 p-2 w-full rounded-md flex items-center justify-center gap-2 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-none hover:bg-indigo-700 hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.8)]">
+                                        {sending && <LoaderCircle size={18} aria-hidden="true" className="animate-spin text-white" />}
                                         {sending ? "Enviando..." : "Enviar mensaje"}
                                     </button>
-                                    {sending && !status && (
-                                        <motion.div 
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            exit={{ opacity: 0 }}
-                                            className="absolute inset-0 bg-black/70 backdrop-blur-md flex flex-col items-center justify-center rounded-2xl z-10 gap-4"
-                                        >
-                                            <RingLoader size={70} color="rgba(31, 26, 97, 1)" />
-                                            <motion.p
-                                                animate={{ opacity: [1, 0.6, 1] }}
-                                                transition={{ duration: 1.5, repeat: Infinity }}
-                                                className="text-zinc-300 font-medium text-lg"
-                                            >
-                                                Enviando<motion.span animate={{ opacity: [0, 1, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>.</motion.span>
-                                            </motion.p>
-                                        </motion.div>
-                                    )}
                                     {status === 'success' && (
                                         <motion.div 
                                             initial={{ opacity: 0, scale: 0.8 }}
