@@ -17,15 +17,15 @@ import { Star, Crosshair, GraduationCap, Users, User, Lightbulb, CodeXml, Rocket
 import { useState } from "react"
 
 const TechCard = ({ tech, selectedTech, setSelectedTech }) => (
-    <div 
-        onClick={() => setSelectedTech(tech.id)} 
+    <div
+        onClick={() => setSelectedTech(tech.id)}
         className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
         bg-[#18181b] border 
         transition-all duration-300 
         ${selectedTech === tech.id
-            ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-            : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
-        }`}>
+                ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+                : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
+            }`}>
         <img
             src={tech.icon}
             alt={tech.name}
@@ -75,8 +75,8 @@ export const AboutMe = () => {
                 <div className="text-center mt-20 w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
                     <h1 className="font-bold text-zinc-300 text-2xl">Sobre mi</h1>
                     <p className="text-zinc-400 text-sm md:text-lg mt-2 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
-                        <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-stretch mt-10">
-                            <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl mt-5 flex-1 min-h-0 break-words overflow-auto">
+                    <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-stretch mt-10">
+                        <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl mt-5 flex-1 min-h-0 break-words overflow-auto">
                             <div className="flex items-start gap-3 p-2">
                                 <User className="text-violet-500" />
                                 <p className="font-bold text-zinc-300 text-sm md:text-lg">Acerca de mi</p>
