@@ -2,6 +2,7 @@
 
 :root {
   font-family: 'Inter', sans-serif;
+  color-scheme: dark;
 }
 
 
@@ -11,7 +12,12 @@ html {
 }
 
 body {
-    background-color:  #1b1b1b;
+    min-width: 320px;
+    background:
+      radial-gradient(ellipse at 50% -20%, rgba(91, 33, 182, 0.18), transparent 45%),
+      radial-gradient(ellipse at 100% 45%, rgba(49, 46, 129, 0.1), transparent 35%),
+      #0c0b10;
+    color: #f4f4f5;
 }
 
 
@@ -160,6 +166,5 @@ body {
     border-radius: 50% 50% 50% 50%;
   }
 }
-
 
 

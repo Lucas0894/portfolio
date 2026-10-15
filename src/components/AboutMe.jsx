@@ -20,11 +20,11 @@ const TechCard = ({ tech, selectedTech, setSelectedTech }) => (
     <div
         onClick={() => setSelectedTech(tech.id)}
         className={`w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-2xl
-        bg-[#18181b] border 
+        bg-gradient-to-b from-zinc-900 to-[#111113] border 
         transition-all duration-300 
         ${selectedTech === tech.id
-                ? "border-violet-500/40 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
-                : "border-white/5 shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
+                ? "border-violet-400/50 shadow-[0_0_30px_rgba(124,58,237,0.20)] -translate-y-1"
+                : "border-white/[0.08] shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:border-violet-400/40 hover:shadow-[0_0_30px_rgba(124,58,237,0.20)] hover:-translate-y-1"
             }`}>
         <img
             src={tech.icon}
@@ -36,7 +36,7 @@ const TechCard = ({ tech, selectedTech, setSelectedTech }) => (
         duration-300
         hover:scale-110"
         />
-        <p className="text-zinc-400 text-xs md:text-sm mt-3">
+        <p         className="text-zinc-300 text-xs md:text-sm mt-3">
             {tech.name}
         </p>
     </div>
@@ -73,10 +73,10 @@ export const AboutMe = () => {
             transition={{ duration: 1 }}>
             <section id="about" className="min-h-screen flex justify-center items-center mt-5">
                 <div className="text-center mt-20 w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
-                    <h1 className="font-bold text-zinc-300 text-2xl">Sobre mi</h1>
-                    <p className="text-zinc-400 text-sm md:text-lg mt-2 xl:p-0">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
+                    <h1 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-200 via-white to-violet-300 text-3xl md:text-4xl tracking-tight">Sobre mí</h1>
+                    <p className="text-zinc-400 text-sm md:text-lg mt-3 xl:p-0 leading-relaxed">Conoce mas sobre mi experiencia, habilidades y lo que me motiva a crear soluciones digitales.</p>
                     <div className="flex flex-col gap-15 xl:flex-row xl:justify-center xl:gap-12 xl:items-stretch mt-10">
-                        <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl mt-5 flex-1 min-h-0 break-words overflow-auto">
+                        <div className="flex w-full flex-col gap-3 text-left bg-gradient-to-b from-zinc-900/95 to-[#111113] border border-white/[0.08] shadow-[0_12px_36px_rgba(0,0,0,0.25)] p-5 md:p-6 rounded-3xl mt-5 flex-1 min-h-0 break-words overflow-auto">
                             <div className="flex items-start gap-3 p-2">
                                 <User className="text-violet-500" />
                                 <p className="font-bold text-zinc-300 text-sm md:text-lg">Acerca de mi</p>
@@ -88,7 +88,7 @@ export const AboutMe = () => {
                                 Poseo conocimientos en Backend y bases de datos, lo que me permite comprender cómo funcionan las aplicaciones de forma integral y tener una visión más completa del desarrollo.
                             </p>
                         </div>
-                        <div className="flex w-full flex-col gap-3 text-left bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl mt-5 flex-1 min-h-0 break-words overflow-auto">
+                        <div className="flex w-full flex-col gap-3 text-left bg-gradient-to-b from-zinc-900/95 to-[#111113] border border-white/[0.08] shadow-[0_12px_36px_rgba(0,0,0,0.25)] p-5 md:p-6 rounded-3xl mt-5 flex-1 min-h-0 break-words overflow-auto">
                             <div className="flex items-start p-2 gap-3">
                                 <Star className="text-violet-500" />
                                 <p className="font-bold text-zinc-300 text-sm md:text-lg">Lo que me define</p>
@@ -96,7 +96,7 @@ export const AboutMe = () => {
                             <div className="flex items-start gap-3">
                                 <Lightbulb className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
                                 <div className="flex flex-col text-left">
-                                    <p className="m-0 text-sm md:text-lg text-violet-500">
+                                    <p className="m-0 text-sm md:text-lg text-violet-300 font-medium">
                                         Pasión por lo que hago
                                     </p>
                                     <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -107,7 +107,7 @@ export const AboutMe = () => {
                             <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
                                 <Crosshair className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
                                 <div className="flex flex-col text-left">
-                                    <p className="m-0 text-sm md:text-lg text-violet-500">
+                                    <p className="m-0 text-sm md:text-lg text-violet-300 font-medium">
                                         Enfoque en el usuario
                                     </p>
                                     <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -118,7 +118,7 @@ export const AboutMe = () => {
                             <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
                                 <GraduationCap className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
                                 <div className="flex flex-col text-left">
-                                    <p className="m-0 text-sm md:text-lg text-violet-500">
+                                    <p className="m-0 text-sm md:text-lg text-violet-300 font-medium">
                                         Aprendizaje constante
                                     </p>
                                     <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -129,7 +129,7 @@ export const AboutMe = () => {
                             <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
                                 <Users className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
                                 <div className="flex flex-col text-left">
-                                    <p className="m-0 text-sm md:text-lg text-violet-500">
+                                    <p className="m-0 text-sm md:text-lg text-violet-300 font-medium">
                                         Trabajo en equipo
                                     </p>
                                     <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -140,7 +140,7 @@ export const AboutMe = () => {
                             <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
                                 <CodeXml className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
                                 <div className="flex flex-col text-left">
-                                    <p className="m-0 text-sm md:text-lg text-violet-500">
+                                    <p className="m-0 text-sm md:text-lg text-violet-300 font-medium">
                                         Atencion al detalle
                                     </p>
                                     <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -151,7 +151,7 @@ export const AboutMe = () => {
                             <div className="flex items-start gap-3 pt-3 border-t border-t-white/10">
                                 <Rocket className="text-violet-500 mt-1 shrink-0 w-6 h-6" />
                                 <div className="flex flex-col text-left">
-                                    <p className="m-0 text-sm md:text-lg text-violet-500">
+                                    <p className="m-0 text-sm md:text-lg text-violet-300 font-medium">
                                         Mentalidad de crecimiento
                                     </p>
                                     <p className="m-0 text-zinc-400 text-sm md:text-lg">
@@ -165,11 +165,11 @@ export const AboutMe = () => {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}>
-                        <h1 className="text-2xl m-10 text-violet-500">
+                        <h2 className="text-2xl md:text-3xl font-bold m-10 text-violet-200 tracking-tight">
                             Tecnologias y Herramientas que utilizo
-                        </h1>
-                        <div className="mt-6 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
-                            <h3 className=" text-2xl m-10 text-violet-500">Frontend</h3>
+                        </h2>
+                        <div className="mt-6 mx-auto w-full xl:max-w-[1600px] bg-gradient-to-b from-zinc-900/90 to-[#111113] border border-white/[0.08] shadow-[0_12px_36px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-3xl">
+                            <h3 className="text-xl md:text-2xl font-semibold m-6 md:m-8 text-zinc-100">Frontend <span className="text-violet-300">/</span></h3>
                             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 justify-items-center gap-6 mt-2 mb-10">
                                 {technologies.frontend.map((tech) => (
                                     <div key={tech.id} className={tech.id === "typescript" ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto" : ""}>
@@ -183,8 +183,8 @@ export const AboutMe = () => {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}>
-                        <div className="translate-y-12 xl:translate-y-18 mx-auto w-full xl:max-w-[1600px] bg-[#202020] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] p-2 rounded-3xl">
-                            <h3 className="text-2xl m-10 text-violet-500">Backend</h3>
+                        <div className="translate-y-12 xl:translate-y-18 mx-auto w-full xl:max-w-[1600px] bg-gradient-to-b from-zinc-900/90 to-[#111113] border border-white/[0.08] shadow-[0_12px_36px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-3xl">
+                            <h3 className="text-xl md:text-2xl font-semibold m-6 md:m-8 text-zinc-100">Backend <span className="text-violet-300">/</span></h3>
                             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 justify-items-center gap-6 mt-2 mb-10">
                                 {technologies.backend.map((tech) => (
                                     <div key={tech.id} className={tech.id === "sequelize" ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto" : ""}>
