@@ -118,10 +118,10 @@ export const Projects = () => {
       <section id="projects" className="min-h-screen flex justify-center items-center mt-10">
 
         <div className="w-full">
-          <h1 className="text-zinc-300 font-bold text-2xl text-center">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-violet-200 via-white to-violet-300 font-bold text-3xl md:text-4xl text-center tracking-tight">
             Proyectos
           </h1>
-          <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2 w-full max-w-[360px] xl:max-w-[900px] mx-auto">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo Fullstack.</p>
+          <p className="text-zinc-400 text-sm md:text-lg mt-4 text-center p-2 w-full max-w-[360px] xl:max-w-[760px] mx-auto leading-relaxed">En esta sección encontrarás una selección de mis proyectos más destacados, que reflejan mi experiencia y habilidades en el desarrollo Fullstack.</p>
           <div className="relative w-full max-w-[360px] xl:max-w-[1600px] mx-auto px-4">
             {
               currentPage > 1 && (
@@ -144,50 +144,51 @@ export const Projects = () => {
                   currentProjects.map((item, i) => {
 
                     return (
-                      <div onClick={() => handleSelected(item.name)} key={i} className={`bg-[#18181b] border relative w-full h-[400px] xl:w-[460px] xl:h-[390px] flex items-center justify-center transition transform hover:scale-105 rounded-3xl overflow-hidden cursor-pointer ${item.name === selected ? "border-violet-500/40 shadow-[0_0_30px_6px_rgba(124,58,237,0.45),0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]" : "border-white/5 hover:border-violet-500/40 hover:shadow-[0_0_30px_6px_rgba(124,58,237,0.45),0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)] shadow-[0_6px_16px_rgba(0,0,0,0.45),0_28px_55px_rgba(0,0,0,0.85)]"} transition duration-300`}>
+                      <div onClick={() => handleSelected(item.name)} key={i} className={`group bg-gradient-to-b from-zinc-900 to-[#111113] border relative w-full h-[400px] xl:w-[460px] xl:h-[390px] flex items-center justify-center transition transform hover:-translate-y-1 rounded-3xl overflow-hidden cursor-pointer ${item.name === selected ? "border-violet-400/60 shadow-[0_0_35px_4px_rgba(124,58,237,0.3),0_10px_24px_rgba(0,0,0,0.45)]" : "border-white/10 hover:border-violet-400/50 hover:shadow-[0_0_35px_4px_rgba(124,58,237,0.25),0_10px_24px_rgba(0,0,0,0.45)] shadow-[0_10px_24px_rgba(0,0,0,0.35)]"} duration-300`}>
                         <div className="w-full h-full flex flex-col">
-                          <div className="h-[220px] xl:h-[58%] overflow-hidden">
-                            <img src={item.image} className="w-full h-full object-cover object-top xl:object-contain xl:object-center rounded-md cursor-pointer hover:grayscale hover:duration-300" />
+                          <div className="h-[220px] xl:h-[58%] overflow-hidden relative">
+                            <img src={item.image} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-zinc-900 to-transparent pointer-events-none" />
                           </div>
-                          <div className="flex items-center">
-                            <div className="w-18 h-18 m-3 shrink-0 rounded-2xl bg-gradient-to-br from-violet-600 to-violet-900 flex items-center justify-center">
-                              <Icon icon={item.icon} className="text-5xl text-white" />
+                          <div className="flex items-center px-1">
+                            <div className="w-16 h-16 m-3 shrink-0 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-800 ring-1 ring-white/15 shadow-lg shadow-violet-950/40 flex items-center justify-center">
+                              <Icon icon={item.icon} className="text-4xl text-white" />
                             </div>
-                            <div className="flex flex-col justify-start">
+                            <div className="flex flex-col justify-start min-w-0 pr-3">
                               <div>
                                 {
-                                  <h3 className="text-2xl font-bold text-white">{item.name}</h3>
+                                  <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">{item.name}</h3>
                                 }
                               </div>
                               <div>
                                 {
-                                  <h4 className="text-sm text-white">{item.shortDescription}</h4>
+                                  <h4 className="text-sm text-zinc-400">{item.shortDescription}</h4>
                                 }
                               </div>
                             </div>
                           </div>
-                          <div className="flex ml-3 mt-3 flex-wrap gap-2">
+                          <div className="flex ml-3 mt-2 flex-wrap gap-2">
                             {
                               item.technologies.slice(0, 4).map((tech) => (
-                                <span className="text-xs px-3 py-1 font-medium text-violet-300 bg-violet-500/10 border border-violet-500/30 rounded-md" key={tech}>{tech}</span>
+                                <span className="text-[11px] px-2.5 py-1 font-medium text-violet-200 bg-violet-400/10 border border-violet-300/15 rounded-full" key={tech}>{tech}</span>
                               ))
                             }
                             {
                               item.technologies.length > 4 && (
-                                <span className="text-xs px-3 py-1 font-medium text-violet-300 bg-violet-500/10 border border-violet-500/30 rounded-md">+ {item.technologies.length - 4}</span>
+                                <span className="text-[11px] px-2.5 py-1 font-medium text-violet-200 bg-violet-400/10 border border-violet-300/15 rounded-full">+ {item.technologies.length - 4}</span>
                               )
                             }
                           </div>
                         </div>
                         <div className={`text-[14px] absolute inset-0 bg-black/0 p-2 hover:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center text-zinc-200 text-center opacity-0 hover:opacity-100 transition duration-300  ${item.name === selected ? "opacity-100 bg-black/60" : "opacity-0"}
-                       group-hover:opacity-100 group-hover:bg-black/60`}>
+                       group-hover:opacity-100 group-hover:bg-black/70`}>
                           {item.description}
-                          <button className="p-2 m-2 sm:p-1 sm:m-1 bg-violet-900 rounded-3xl cursor-pointer transition border border-violet-500/40 hover:border-violet-500/40 hover:hover:shadow-[0_0_25px_rgba(124,58,237,0.5)] transform hover:scale-110">
+                          <button className="p-2 m-2 sm:p-1 sm:m-1 bg-violet-700/80 rounded-3xl cursor-pointer transition border border-violet-300/30 hover:border-violet-200/60 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)] transform hover:scale-105">
                             <a className="p-3" href={item.gitHub}>Link Repositorio</a>
                           </button>
                           {
                             item.page ?
-                              <button className="p-2 m-2 sm:p-1 sm:m-1 bg-violet-900 rounded-3xl cursor-pointer border border-violet-500/40 hover:border-violet-500/40 hover:hover:shadow-[0_0_25px_rgba(124,58,237,0.5)] transition transform hover:scale-110">
+                              <button className="p-2 m-2 sm:p-1 sm:m-1 bg-violet-700/80 rounded-3xl cursor-pointer border border-violet-300/30 hover:border-violet-200/60 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)] transition transform hover:scale-105">
                                 <a className="p-3" href={item.page}>Sitio Web</a>
                               </button> : ""
                           }
@@ -221,7 +222,6 @@ export const Projects = () => {
     </motion.div>
   )
 }
-
 
 
 
