@@ -65,6 +65,7 @@ export const AboutMe = () => {
             { id: "sequelize", name: "Sequeliz", icon: sequelize },
         ]
     }
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
